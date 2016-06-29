@@ -1,0 +1,2 @@
+# myPublish
+npm my publish
