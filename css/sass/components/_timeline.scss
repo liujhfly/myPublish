@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/*
+* Timeline时间轴样式
+*
+* --------------------------------------------------
+*/
+
+/* Timeline时间轴 */
+
+$timeline-tail-color: #eee !default;
+
+.timeline {
+
+    &-item {
+        position: relative;
+        padding-bottom: 10px;
+
+        &.next-more {
+
+            .timeline-tail {
+                border-left-style: dashed;
+            }
+        }
+
+        &:last-child {
+
+            .timeline-tail {
+                display: none;
+            }
+        }
+    }
+
+    &-tail {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        height: 100%;
+        border-left: 1px solid $timeline-tail-color;
+    }
+
+    &-head {
+        position: absolute;
+        width: 30px;
+        font-size: $font-size-normal;
+        text-align: center;
+        color: lighten($color-primary, 10%);
+        line-height: 1;
+        padding-top: 3px;
+        background-color: #fff;
+
+        &-gray {
+            color: $gray-light;
+        }
+
+        &-red {
+            color: $color-error;
+        }
+
+        &-green {
+            color: $color-success;
+        }
+    }
+
+    &-main {
+        position: relative;
+        font-size: $font-size-base;
+        padding: 0 0 10px 35px;
+    }
+
+    &-pending {
+
+        .timeline-tail {
+            display: none;
+        }
+    }
+}
+
+
+
+

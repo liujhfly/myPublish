@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/*
+* Spin加载中样式
+*
+* --------------------------------------------------
+*/
+
+.spinning {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  .spin {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    padding: 4px;
+    margin: 3px;
+    vertical-align: middle;
+    background-color: $color-primary;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    @keyframes spinAction {
+      0%{
+        opacity: 0;
+      }
+      10%{
+        opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      90%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+    @-moz-keyframes spinAction {
+      0%{
+        opacity: 0;
+      }
+      10%{
+        opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      90%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+    @-o-keyframes spinAction {
+      0%{
+        opacity: 0;
+      }
+      10%{
+        opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      90%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+    @-webkit-keyframes spinAction {
+      0%{
+        opacity: 0;
+      }
+      10%{
+        opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      90%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+    &:nth-child(3n+1){
+      -webkit-animation: spinAction 1.8s infinite;
+      animation: spinAction 1.8s infinite;
+    }
+    &:nth-child(3n+2){
+      -webkit-animation: spinAction 1.8s 0.3s infinite;
+      animation: spinAction 1.8s 0.3s infinite;
+    }
+    &:nth-child(3n+3){
+      -webkit-animation: spinAction 1.8s 0.6s infinite;
+      animation: spinAction 1.8s 0.6s infinite;
+    }
+  }
+  &.small .spin {
+    padding: 2px;
+    margin: 1px;
+  }
+  &.large .spin {
+    padding: 6px;
+    margin: 5px;
+  }
+}
+
+.spinning-box{
+  position: relative;
+  width: 100%;
+  min-height: 22px;
+  .spinning{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -10px;
+    display: none;  
+  }
+  &.loading{
+    .spinning{
+      display: block;
+    }
+    .spinning-content{
+      opacity: .7;
+      background-color: #fff;
+      -webkit-filter: blur(1px);
+      filter: blur(1px);
+      pointer-events: none;
+    }
+  }
+}
+
+/*Spin加载中*/
+
+
+
+
+

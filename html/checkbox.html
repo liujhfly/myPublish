@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范" />
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="checkbox">
+        <article class="markdown">
+            <h1>
+                Checkbox 多选框
+            </h1>
+
+            <p>多选框。</p>
+
+            <ul class="list-unorder">
+                <li>在一组可选项中进行多项选择时；</li>
+                <li>和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。</li>
+            </ul>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+                        <div class="checkbox-list">
+                            <label class="checkbox-inline">
+                                <span class="checkbox">
+                                    <input class="input-checkbox" checked value="1" type="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </span>
+
+                                <span class="label-right">选项一</span>
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <span class="checkbox">
+                                    <input class="input-checkbox" value="2" type="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </span>
+
+                                <span class="label-right">选项二</span>
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <span class="checkbox">
+                                    <input class="input-checkbox" value="3" type="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </span>
+
+                                <span class="label-right">选项三</span>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">内联多选框</a>
+                        </div>
+
+                        <p>默认为内联样式,通过设置<code>label</code>标签的属性
+                            <code>class</code>值为<code>.checkbox</code>,
+                            实现自定义多选框功能。</p>
+                        <p>多选框的文字说明在右侧时,可使用标签<code>span</code>设置属性<code>class</code>
+                            值为<code>.label-right</code>可适当增加左右边距。</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;label class="checkbox-inline"&gt;</span>
+                        <br><span class="xmp">&lt;div class="checkbox"&gt;</span>
+                        <xmp>
+                            <input class="input-checkbox" value="2" type="checkbox">
+                        </xmp>
+                        <xmp>
+                            <span class="style-checkbox"></span>
+                        </xmp>
+                        <span class="xmp">&lt;/div&gt;</span>
+                        <xmp>
+                            <span class="label-right">单选三</span>
+                        </xmp>
+                        <span class="xmp">&lt;/label&gt;</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+                        <div class="checkbox-list">
+                            <label class="checkbox-block">
+                                <div class="checkbox">
+                                    <input class="input-checkbox" checked value="1" type="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">选项一</span>
+                            </label>
+
+                            <label class="checkbox-block">
+                                <div class="checkbox">
+                                    <input class="input-checkbox" value="2" type="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">选项二</span>
+                            </label>
+
+                            <label class="checkbox-block">
+                                <div class="checkbox">
+                                    <input class="input-checkbox" value="3" type="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">选项三</span>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">多选框列表</a>
+                        </div>
+
+                        <p>多选框列表样式是通过在<code>label</code>标签的父节点设置属性
+                            <code>class</code>值为<code>.checkbox-block</code>,
+                            实现自定义多选框功能。</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;label class="checkbox-block"&gt;</span>
+                        <br><span class="xmp">&lt;div class="checkbox"&gt;</span>
+                        <xmp>
+                            <input class="input-checkbox" value="2" type="checkbox">
+                        </xmp>
+                        <xmp>
+                            <span class="style-checkbox"></span>
+                        </xmp>
+                        <span class="xmp">&lt;/div&gt;</span>
+                        <xmp>
+                            <span class="label-right">选项内容</span>
+                        </xmp>
+                        <span class="xmp">&lt;/label&gt;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+                        <div class="checkbox-list">
+                            <label class="checkbox-inline checkbox-disabled checkbox-checked">
+                                <div class="checkbox">
+                                    <!--<input class="input-checkbox" checked disabled value="1" type="checkbox">-->
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">选项一</span>
+                            </label>
+
+                            <label class="checkbox-inline checkbox-disabled">
+                                <div class="checkbox">
+                                    <input class="input-checkbox" disabled value="2" type="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">选项二</span>
+                            </label>
+                            <label class="checkbox-inline checkbox-disabled">
+                                <div class="checkbox">
+                                    <input class="input-checkbox" disabled value="3" type="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">选项三</span>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">单选框</a>
+                        </div>
+
+                        <p>通过使用标签 <code>label</code> ,配合
+                            <code>class</code>名
+                            实现自定义单选框功能。</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;label class="checkbox-inline checkbox-disabled"&gt;</span>
+                        <br><span class="xmp">&lt;div class="checkbox"&gt;</span>
+                        <xmp>
+                            <input class="input-checkbox" disabled value="2" type="checkbox">
+                        </xmp>
+                        <xmp>
+                            <span class="style-checkbox"></span>
+                        </xmp>
+                        <span class="xmp">&lt;/div&gt;</span>
+                        <xmp>
+                            <span class="label-right">选项内容</span>
+                        </xmp>
+                        <span class="xmp">&lt;/label&gt;</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+                        <div class="checkbox-list">
+                            <label class="checkbox-block checkbox-checked">
+                                <div class="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">选中状态的多选框</span>
+                            </label>
+                            <label class="checkbox-block">
+                                <div class="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">未选中状态的多选框</span>
+                            </label>
+                            <label class="checkbox-block checkbox-checked checkbox-disabled">
+                                <div class="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">不可用的选中状态多选框</span>
+                            </label>
+
+                            <label class="checkbox-block checkbox-disabled">
+                                <div class="checkbox">
+                                    <span class="style-checkbox"></span>
+                                </div>
+
+                                <span class="label-right">不可用的未选中状态多选框</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">纯样式多选框</a>
+                        </div>
+
+                        <p>纯样式多选框是通过在<code>label</code>标签或其父节点设置属性
+                            <code>class</code>值为<code>.checkbox-disabled</code>和<code>.checkbox-checked</code>实现的。</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;label class="checkbox-block checkbox-checked checkbox-disabled"&gt;</span>
+                        <br><span class="xmp">&lt;div class="checkbox"&gt;</span>
+                        <xmp>
+                            <input class="input-checkbox" disabled value="2" name="checkbox1" type="checkbox">
+                        </xmp>
+                        <xmp>
+                            <span class="style-checkbox"></span>
+                        </xmp>
+                        <span class="xmp">&lt;/div&gt;</span>
+                        <xmp>
+                            <span class="label-right">模拟多选框样式</span>
+                        </xmp>
+                        <span class="xmp">&lt;/label&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

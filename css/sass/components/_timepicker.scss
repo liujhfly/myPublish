@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/*
+* TimePicker时间选择框样式
+*
+* --------------------------------------------------
+*/
+
+/* TimePicker时间选择框 */
+.time-picker {
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.form-time-picker {
+    position: relative;
+    display: inline-block;
+
+    .time-picker-input {
+        width: 100px;
+        background-color: #fff;
+        cursor: pointer;
+
+        &.disabled,
+        &[disabled] {
+            cursor: not-allowed;
+            color: $gray-light;
+            background-color: $input-bg-disabled;
+        }
+    }
+
+    .qIcon {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        font-size: $font-size-normal;
+        color: $gray-light;
+        margin-top: -9px;
+        cursor: pointer;
+    }
+}
+
+.time-picker-panel {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 168px;
+    z-index: $zindex-popover;
+
+    &.open {
+        display: inline-block;
+    }
+}
+
+
+.time-picker-inner {
+    position: relative;
+    display: inline-block;
+    font-size: $font-size-base;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid $input-border;
+    @include box-shadow(0 0 4px rgba(0, 0, 0, 0.17));
+    outline: none;
+    overflow: hidden;
+}
+
+.time-picker-value {
+    position: relative;
+    width: 168px;
+
+    &.no-second {
+        width: 112px;
+    }
+
+    .time-picker-panel-input {
+        width: 100%;
+        border: none;
+    }
+
+    .qIcon {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        font-size: $font-size-normal;
+        margin-top: -9px;
+    }
+}
+
+.time-picker-dropdown {
+    @include clearfix();
+    border-top: 1px solid $input-border;
+    border-bottom: 1px solid $input-border;
+}
+
+.time-picker-select {
+    float:left;
+    position: relative;
+    width: 56px;
+    font-size: $font-size-base;
+    text-align: left;
+    border-right: 1px solid $input-border;
+    @include box-sizing(border-box);
+    overflow: hidden;
+
+    &:last-child {
+        border-right: transparent;
+    }
+
+
+    &:hover {
+        overflow-y: auto;
+    }
+
+    ul {
+        list-style: none;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-height: 144px;
+    }
+
+    li {
+        width: 100%;
+        height: 24px;
+        list-style: none;
+        line-height: 24px;
+        text-align: left;
+        margin: 0;
+        padding: 0 0 0 16px;
+        cursor: pointer;
+        @include box-sizing(content-box);
+        @include user-select(none);
+        @include transition(background .3s ease);
+
+        &.selected {
+            color: #fff;
+            background: lighten($color-primary, 20%);
+        }
+
+        &:hover {
+            background: lighten($color-primary, 40%);
+
+            &.selected {
+                color: #fff;
+                background: lighten($color-primary, 20%);
+            }
+
+            &.disabled {
+                color: $gray-light;
+                background: #fff;
+                cursor: not-allowed;
+            }
+        }
+
+        &.disabled {
+            color: $gray-light;
+        }
+    }
+}
+
+

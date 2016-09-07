@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范" />
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="collapse">
+        <article class="markdown">
+            <h1>
+                折叠面板
+            </h1>
+
+            <p>可以折叠/展开的内容区域。</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="collapse-demo-basic">
+
+                            <div class="collapse">
+                                <div class="collapse-item">
+                                    <div class="collapse-header collapse-header-active">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 1</span>
+                                    </div>
+                                    <div class="collapse-content collapse-content-active">
+                                        <div class="collapse-content-box">
+                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <div class="collapse-header">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 2</span>
+                                    </div>
+                                    <div class="collapse-content">
+                                        <div class="collapse-content-box">
+                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <div class="collapse-header">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 3</span>
+                                    </div>
+                                    <div class="collapse-content">
+                                        <div class="collapse-content-box">
+                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">折叠面板</a>
+                        </div>
+
+                        <p>可以同时展开多个面板，这个例子默认展开了第一个。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-mix">
+                    <div class="code-box-demo">
+
+                        <div class="collapse-demo-mix">
+
+                            <div class="collapse">
+                                <div class="collapse-item">
+                                    <div class="collapse-header">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 1</span>
+                                    </div>
+                                    <div class="collapse-content">
+                                        <div class="collapse-content-box">
+                                            <div class="collapse">
+                                                <div class="collapse-item">
+                                                    <div class="collapse-header collapse-header-active">
+                                                        <i class="qIcon solidArrowDown"></i><span>This is panel nest panel</span>
+                                                    </div>
+                                                    <div class="collapse-content collapse-content-active">
+                                                        <div class="collapse-content-box">
+                                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <div class="collapse-header">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 2</span>
+                                    </div>
+                                    <div class="collapse-content">
+                                        <div class="collapse-content-box">
+                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <div class="collapse-header">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 3</span>
+                                    </div>
+                                    <div class="collapse-content">
+                                        <div class="collapse-content-box">
+                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">面板嵌套</a>
+                        </div>
+
+                        <p>手风琴嵌套折叠面板。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12">
+                <div class="code-box expand" id="demo-accordion">
+                    <div class="code-box-demo">
+
+                        <div class="collapse-demo-accordion">
+
+                            <div class="collapse">
+                                <div class="collapse-item">
+                                    <div class="collapse-header">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 1</span>
+                                    </div>
+                                    <div class="collapse-content">
+                                        <div class="collapse-content-box">
+                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <div class="collapse-header">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 2</span>
+                                    </div>
+                                    <div class="collapse-content">
+                                        <div class="collapse-content-box">
+                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-item">
+                                    <div class="collapse-header">
+                                        <i class="qIcon solidArrowDown"></i><span>This is panel header 3</span>
+                                    </div>
+                                    <div class="collapse-content">
+                                        <div class="collapse-content-box">
+                                            <p>A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">手风琴</a>
+                        </div>
+
+                        <p>手风琴，每次只打开一个tab。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

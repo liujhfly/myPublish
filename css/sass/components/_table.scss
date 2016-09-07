@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/*
+* Table表格样式
+*
+* --------------------------------------------------
+*/
+
+/* Table表格 */
+
+.table {
+
+    table {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        border-bottom: 1px solid #e9e9e9;
+        border-right: 1px solid #e9e9e9;
+    }
+
+    tr {
+
+        td:first-child {
+            border-left: 1px solid #e9e9e9;
+        }
+    }
+
+
+
+    th {
+        color: $gray;
+        background: #f4f4f4;
+        font-weight: bold;
+        border-top: 1px solid #e9e9e9;
+    }
+
+    .btn-link {
+        padding: 2px 6px;
+        border: 0;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+
+    .col-xs {
+        width: 4%;
+        text-align: center;
+    }
+
+    .col-sm {
+        width: 8%;
+        text-align: center;
+    }
+
+    .col-md {
+        width: 12%;
+        text-align: center;
+    }
+
+    .col-lg {
+        width: 20%;
+        text-align: center;
+    }
+    .col-xlg {
+        width: 30%;
+        text-align: left;
+    }
+    .col-xxlg {
+        width: 40%;
+        text-align: left;
+    }
+}
+
+.table-header {
+    padding: 10px 0;
+
+    .btn + .btn,
+    .btn-clear + .btn,
+    .btn + .btn-clear,
+    .btn-clear + .btn-clear {
+        //margin-left: 3px;
+    }
+}
+
+.table-tips {
+    padding-left: 10px;
+
+    strong {
+        font-weight: normal;
+        padding: 0 3px;
+    }
+
+    b {
+        padding: 0 3px;
+    }
+}
+
+.table-pagination {
+    float: right;
+    margin: 10px 0;
+}
+
+.sorting {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: $line-height-computed;
+    margin-top: -2px;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: 50%;
+        margin-top: -4px;
+        right: 5px;
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: 4px solid transparent;
+    }
+
+    &:before {
+        border-bottom-color: $gray-light;
+        border-top-width: 0;
+    }
+
+    &:after {
+        margin-top: 1px;
+        border-top-color: $gray-light;
+        border-bottom-width: 0;
+    }
+
+    &:hover {
+
+        &:after {
+            border-top-color: $gray;
+        }
+    }
+
+    &.desc {
+
+        &:after {
+            border-top-color: lighten($color-primary, 10%);
+        }
+
+        &:hover {
+
+            &:before {
+                border-bottom-color: $gray;
+            }
+
+            &:after {
+                border-top-color: lighten($color-primary, 10%);
+            }
+        }
+    }
+
+    &.asc {
+
+        &:before {
+            border-bottom-color: lighten($color-primary, 10%);
+        }
+
+        &:hover {
+
+            &:before {
+                border-bottom-color: lighten($color-primary, 10%);
+            }
+
+            &:after {
+                border-top-color: lighten($color-primary, 10%);
+            }
+        }
+    }
+
+}
+
+

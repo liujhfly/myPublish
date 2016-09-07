@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/*
+* Notification通知提醒框样式
+*
+* --------------------------------------------------
+*/
+.notification-box{
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  z-index: 999;
+}
+.notification{
+  position: relative;
+  max-width: 335px;
+  padding: 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.17);
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  line-height: 1.5;
+  .notification-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    color: inherit;
+    cursor: pointer;
+  }
+  .notification-body{
+    .notification-icon{
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      margin-top: -17px;
+      font-size: 34px;
+      .qIcon:before{
+        display: block;
+      }
+    }
+    .message-area{
+      .message-area-title{
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+  &.nf-success,
+  &.nf-info,
+  &.nf-warn,
+  &.nf-error{
+    .message-area{
+      margin-left: 35px;
+    }
+  }
+  &.nf-success{
+    .notification-body .notification-icon .qIcon:before {
+      color: $color-success;
+      content: "\e64e";
+    }
+  }
+  &.nf-info{
+    .notification-body .notification-icon .qIcon:before {
+      color: $color-info;
+      content: "\e653";
+    }
+  }
+  &.nf-warn{
+    .notification-body .notification-icon .qIcon:before {
+      color: $color-info;
+      content: "\e652";
+    }
+  }
+  &.nf-error{
+    .notification-body .notification-icon .qIcon:before {
+      color: $color-error;
+      content: "\e63e";
+    }
+  }
+}
+
+/* Notification通知提醒框 */
+
+
+
+
+

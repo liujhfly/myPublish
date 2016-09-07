@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/*
+* Transfer穿梭框样式
+*
+* --------------------------------------------------
+*/
+
+.transfer{
+    .transfer-list{
+        display: inline-block;
+        position: relative;
+        width: 234px;
+        height: 220px;
+        padding-top: 33px;
+        border: 1px solid $color-table-border;
+        vertical-align: middle;
+        .transfer-list-header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 3px 16px;
+            color: $gray;
+            border-radius: 6px 6px 0 0;
+            border-bottom: 1px solid $color-table-border;
+            background: #fff;
+            overflow: hidden;
+            .transfer-list-header-title{
+                float: right;
+                padding: 4px 0;
+            }
+        }
+        .transfer-list-body {
+            position: relative;
+            height: 100%;
+            ul {
+                height: 100%;
+                overflow: auto;
+                li {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    padding: 7px 16px;
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: $color-primary-lighter;
+                    }
+                    .list-area{
+                        display: inline-block;
+                        margin-left: 5px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .input-checkbox{
+            height: auto;
+        }
+        .searcher{
+            display: none;
+            position: absolute;
+            top: 38px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            .input-group{
+                width: 100%;
+            }
+        }
+        &.has-search{
+            padding-top: 71px;
+            .searcher{
+                display: block;
+            }
+        }
+    }
+    .transfer-operation{
+        display: inline-block;
+        margin: 0 8px;
+        vertical-align: middle;
+        .btn{
+            float: left;
+            clear: both;
+            &+.btn{
+                margin: 5px 0 0;
+            }
+        }
+    }
+}
+
+/* Transfer穿梭框 */
+
+
+

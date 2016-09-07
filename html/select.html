@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="select">
+        <article class="markdown">
+            <h1>
+                Select 选择器
+            </h1>
+
+            <p>单选功能的选择器和复选功能的选择器。</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <u class="select-wrapper">
+                            <select>
+                                <option value="1">商品类目</option>
+                                <option value="2">商品编号</option>
+                            </select>
+                        </u>
+
+                        <u class="select-wrapper">
+                            <select disabled>
+                                <option value="1">商品类目</option>
+                                <option value="2">商品编号</option>
+                            </select>
+                        </u>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">基本选择框</a>
+                        </div>
+
+                        <p>以原生的选择器为主,在父节点使用<code>class</code>值为<code>.select-wrapper</code>,
+                            实现简单样式修正。</p>
+                        <p>不可用时,只要在<code>select</code>标签中增加<code>disabled</code>
+                            属性,或增加<code>class</code>属性,设置值为<code>disabled</code>。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;u class="select-wrapper"&gt;</span>
+                        <br><span class="xmp">&lt;dselect&gt;</span>
+                        <xmp>
+                            <option value="1">商品类目</option>
+                        </xmp>
+                        <xmp>
+                            <option value="2">商品编号</option>
+                        </xmp>
+                        <span class="xmp">&lt;/select&gt;</span>
+                        <br>
+                        <span class="xmp">&lt;/u&gt;</span>
+                        <br>
+                        <span class="xmp">&lt;u class="select-wrapper"&gt;</span>
+                        <br><span class="xmp">&lt;dselect disabled&gt;</span>
+                        <xmp>
+                            <option value="1">商品类目</option>
+                        </xmp>
+                        <xmp>
+                            <option value="2">商品编号</option>
+                        </xmp>
+                        <span class="xmp">&lt;/select&gt;</span>
+                        <br>
+                        <span class="xmp">&lt;/u&gt;</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-multi-select">
+                            <div class="select-choice">
+                                <span class="selected-option has-placeholder">
+                                    <span class="placeholder">默认选项</span>
+                                </span>
+                                <span class="selected-clear">
+                                    <i class="icon-cross-line"></i>
+                                </span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+                            <div class="select-dropdown">
+                                <div class="form-search">
+                                    <input class="search-input" type="text" placeholder="请输入关键词">
+                                    <i class="icons icon-search"></i>
+                                </div>
+                                <div class="select-options-add">
+                                    <input type="text" placeholder="请输入新增选项">
+                                    <span class="icons icon-plus-line"></span>
+                                </div>
+                                <ul class="select-options list-unstyled">
+                                    <li class="option"><span>选项一</span><i class="icons icon-cross-line"></i></li>
+                                    <li class="option"><span>选项二</span><i class="icons icon-cross-line"></i></li>
+                                    <li class="option">选项三</li>
+                                    <li class="option">选项四</li>
+                                    <li class="option">选项五</li>
+                                    <li class="option">选项六</li>
+                                    <li class="option">选项七</li>
+                                    <li class="option">选项八</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-multi-select disabled">
+                            <div class="select-choice">
+                                <span class="selected-option"><span class="selected-option-item">选项一</span><span class="selected-option-item">选项二</span>
+                                </span>
+                                <span class="selected-clear">
+                                    <i class="icon-cross-line"></i>
+                                </span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+                            <div class="select-dropdown">
+                                <div class="form-search">
+                                    <input class="search-input" type="text" placeholder="请输入关键词">
+                                    <i class="icons icon-search"></i>
+                                </div>
+                                <ul class="select-options list-unstyled">
+                                    <li class="option">选项一</li>
+                                    <li class="option">选项二</li>
+                                    <li class="option">选项三</li>
+                                    <li class="option">选项四</li>
+                                    <li class="option">选项五</li>
+                                    <li class="option">选项六</li>
+                                    <li class="option">选项七</li>
+                                    <li class="option">选项八</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">自定义选择框</a>
+                        </div>
+
+                        <p>以原生的选择器为主,在父节点使用<code>class</code>值为<code>.select-wrapper</code>,
+                            实现简单样式修正。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-select">
+                            <div class="select-choice">
+                                <span class="selected-option no-clear">10 条/页</span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+                            <div class="select-dropdown">
+                                <ul class="select-options list-unstyled">
+                                    <li class="option">10 条/页</li>
+                                    <li class="option">20 条/页</li>
+                                    <li class="option">30 条/页</li>
+                                    <li class="option">40 条/页</li>
+                                    <li class="option">50 条/页</li>
+                                    <li class="option">60 条/页</li>
+                                    <li class="option">80 条/页</li>
+                                    <li class="option">100 条/页</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="form-select">
+                            <div class="select-choice">
+                                <span class="selected-option placeholder">默认选项</span>
+                                <span class="selected-clear">
+                                    <i class="icon-cross-line"></i>
+                                </span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+                            <div class="select-dropdown">
+                                <div class="form-search">
+                                    <input class="search-input" type="text" placeholder="请输入关键词">
+                                    <i class="icons icon-search"></i>
+                                </div>
+                                <ul class="select-options list-unstyled">
+                                    <li class="option">选项一</li>
+                                    <li class="option">如果选项的内容非常长的时候,会显示省略号,不换行显示,请注意字数控制</li>
+                                    <li class="option disabled">选项三</li>
+                                    <li class="option">选项四</li>
+                                    <li class="option">选项五</li>
+                                    <li class="option">选项六</li>
+                                    <li class="option">选项七</li>
+                                    <li class="option">选项八</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-select disabled">
+                            <div class="select-choice">
+                                <span class="selected-option">选项二</span>
+                                <span class="selected-clear">
+                                    <i class="icon-cross-line"></i>
+                                </span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+                            <div class="select-dropdown">
+                                <div class="form-search">
+                                    <input class="search-input" type="text" placeholder="请输入关键词">
+                                    <i class="icons icon-search"></i>
+                                </div>
+                                <ul class="select-options list-unstyled">
+                                    <li class="option">选项一</li>
+                                    <li class="option">选项二</li>
+                                    <li class="option disabled">选项三</li>
+                                    <li class="option">选项四</li>
+                                    <li class="option">选项五</li>
+                                    <li class="option">选项六</li>
+                                    <li class="option">选项七</li>
+                                    <li class="option">选项八</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">自定义选择框</a>
+                        </div>
+
+                        <p>自定义单项选择的选择框,需要配合js实现的自定义选择框.
+                            带搜索输入框功能,如果不需要可直接去除DOM结构即可.
+                        如果没有清除功能的选择框,需要在<code>.selected-option</code>类名元素中
+                            增加<code>.no-clear</code>类名.</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

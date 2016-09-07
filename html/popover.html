@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="popover">
+        <article class="markdown">
+            <h1>
+                气泡卡片
+            </h1>
+
+            <p>说明</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="popover" id="popoverDemo1" data-direction="top">
+                            <button class="btn">弹出卡片</button>
+                        </div>
+
+                        <div class="popover" id="popoverDemo2" data-direction="bottom" style="margin-left: 50px;">
+                            <i class="qIcon bangzhu"></i>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">基本</a>
+                        </div>
+
+                        <p>最简单的用法，浮层的大小由内容区域决定。鼠标移入显示气泡卡片,
+                            卡片位置由<code>data-direction</code>属性的值来设定.</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="popover" id="popoverDemo3" data-direction="topLeft">
+                                        <button class="btn">上左</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="popover" id="popoverDemo4" data-direction="top">
+                                        <button class="btn">上边</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="popover" id="popoverDemo5" data-direction="topRight">
+                                        <button class="btn">上右</button>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="popover" id="popoverDemo9" data-direction="leftTop">
+                                        <button class="btn">左上</button>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="popover" id="popoverDemo12" data-direction="rightTop">
+                                        <button class="btn">右上</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="popover" id="popoverDemo10" data-direction="left">
+                                        <button class="btn">左边</button>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="popover" id="popoverDemo13" data-direction="right">
+                                        <button class="btn">右边</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="popover" id="popoverDemo11" data-direction="leftBottom">
+                                        <button class="btn">左下</button>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="popover" id="popoverDemo14" data-direction="rightBottom">
+                                        <button class="btn">右下</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="popover" id="popoverDemo6" data-direction="bottomLeft">
+                                        <button class="btn">下左</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="popover" id="popoverDemo7" data-direction="bottom">
+                                        <button class="btn">下边</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="popover" id="popoverDemo8" data-direction="bottomRight">
+                                        <button class="btn">下右</button>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">多方向</a>
+                        </div>
+
+                        <p>鼠标移入显示气泡卡片,
+                            卡片位置由<code>data-direction</code>属性的值来设定.可以设定的值有:
+                            <br>
+                            <code>top</code> <code>topLeft</code> <code>topRight</code>
+                            <br>
+                            <code>bottom</code> <code>bottomLeft</code> <code>bottomRight</code>
+                            <br>
+                            <code>left</code> <code>leftTop</code> <code>leftBottom</code>
+                            <br>
+                            <code>right</code> <code>rightTop</code> <code>rightBottom</code>
+                        </p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<div class="popover-panel" id="popoverPanel" >
+    <div class="popover-arrow"></div>
+    <div class="popover-panel-inner">
+        <div class="popover-title">
+            标题
+        </div>
+        <div class="popover-content">
+            <p>内容一</p>
+
+            <p>内容二</p>
+
+            <p>内容三</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

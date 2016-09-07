@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/*
+* Popover气泡卡片样式
+*
+* --------------------------------------------------
+*/
+
+$tooltip-bg: #373737 !default;
+
+/* Popover气泡卡片 */
+.popover {
+    //position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.popover-outer {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.popover-panel {
+    position: absolute;
+    display: none;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: normal;
+    text-align: left;
+    white-space: normal;
+    cursor: auto;
+    z-index: $zindex-popover;
+    @include user-select(text);
+
+    &.open {
+        display: block;
+    }
+}
+
+.popover-arrow {
+    border-width: 5px;
+
+    &,
+    &:after {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    &:after {
+        content: '';
+        border-width: 4px;
+    }
+}
+
+.popover-top,
+.popover-topLeft,
+.popover-topRight {
+    padding-bottom: 4px;
+
+    .popover-arrow {
+        border-bottom-width: 0;
+        border-top-color: #d9d9d9;
+        bottom: 0;
+
+        &:after {
+            content: " ";
+            bottom: 1px;
+            margin-left: -4px;
+            border-bottom-width: 0;
+            border-top-color: #fff;
+        }
+    }
+
+    .tooltip {
+
+        .popover-arrow {
+
+            &:after {
+                border-top-color: $tooltip-bg;
+            }
+        }
+    }
+}
+
+.popover-top {
+
+    .popover-arrow {
+        left: 50%;
+        margin-left: -5px;
+    }
+}
+.popover-topLeft {
+
+    .popover-arrow {
+        left: 16px;
+    }
+}
+
+.popover-topRight {
+
+    .popover-arrow {
+        right: 16px;
+    }
+}
+
+.popover-bottom,
+.popover-bottomLeft,
+.popover-bottomRight {
+    padding-top: 4px;
+
+    .popover-arrow {
+        border-top-width: 0;
+        border-bottom-color: #d9d9d9;
+        top: 0;
+
+        &:after {
+            content: "";
+            top: 1px;
+            margin-left: -4px;
+            border-top-width: 0;
+            border-bottom-color: #fff;
+        }
+    }
+
+    .tooltip {
+
+        .popover-arrow {
+
+            &:after {
+                border-bottom-color: $tooltip-bg;
+            }
+        }
+    }
+}
+
+.popover-bottom {
+
+    .popover-arrow {
+        left: 50%;
+        margin-left: -5px;
+    }
+}
+.popover-bottomLeft {
+
+    .popover-arrow {
+        left: 16px;
+    }
+}
+
+.popover-bottomRight {
+
+    .popover-arrow {
+        right: 16px;
+    }
+}
+
+.popover-left,
+.popover-leftTop,
+.popover-leftBottom {
+    padding-right: 4px;
+
+    .popover-arrow {
+        border-right-width: 0;
+        border-left-color: #d9d9d9;
+        right: 0;
+
+        &:after {
+            content: " ";
+            right: 1px;
+            border-right-width: 0;
+            border-left-color: #fff;
+            bottom: -4px;
+        }
+    }
+
+    .tooltip {
+
+        .popover-arrow {
+
+            &:after {
+                border-left-color: $tooltip-bg;
+            }
+        }
+    }
+}
+
+.popover-left {
+
+    .popover-arrow {
+        top: 50%;
+        margin-top: -5px;
+    }
+}
+.popover-leftTop {
+
+    .popover-arrow {
+        top: 10px;
+    }
+}
+
+.popover-leftBottom {
+
+    .popover-arrow {
+        bottom: 10px;
+    }
+}
+
+.popover-right,
+.popover-rightTop,
+.popover-rightBottom {
+    padding-left: 4px;
+
+    .popover-arrow {
+        border-left-width: 0;
+        border-right-color: #d9d9d9;
+        left: 0;
+
+        &:after {
+            content: " ";
+            left: 1px;
+            border-left-width: 0;
+            border-right-color: #fff;
+            bottom: -4px;
+        }
+    }
+
+    .tooltip {
+
+        .popover-arrow {
+
+            &:after {
+                border-right-color: $tooltip-bg;
+            }
+        }
+    }
+}
+
+.popover-right {
+
+    .popover-arrow {
+        top: 50%;
+        margin-top: -5px;
+    }
+}
+.popover-rightTop {
+
+    .popover-arrow {
+        top: 10px;
+    }
+}
+
+.popover-rightBottom {
+
+    .popover-arrow {
+        bottom: 10px;
+    }
+}
+
+.popover-panel-inner {
+    min-width: 100px;
+    min-height: 35px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid $input-border;
+    @include border-radius(6px);
+    @include box-shadow(0 0 4px rgba(0,0,0,0.17));
+}
+
+.tooltip .popover-panel-inner {
+    color: #fff;
+    background-color: $tooltip-bg;
+}
+
+.popover-title {
+    margin: 0;
+    padding: 8px 16px;
+    border-bottom: 1px solid $input-border;
+}
+
+.popover-content {
+    padding: 8px 16px;
+}
+
+/* 气泡确认框 */
+.pop-tips {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.pop-btns-group {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 文字提示 */

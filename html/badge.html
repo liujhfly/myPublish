@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="badge">
+        <article class="markdown">
+            <h1>徽标数</h1>
+            <p>一般出现在通知图标或头像的右上角，用于显示需要处理的消息条数，通过醒目视觉形式吸引用户处理。</p>
+            <h2 class="component-demos">代码演示</h2>
+            <div class="code-boxes">
+                <div class="col-24">
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <a href="#" class="badge"></a>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#demo-basic" class="qIcon biaoqian">红点</a>
+                            </div>
+                            <p>标签加类名<code>.badge</code>即可</p>
+                        </div>
+                        <div class="highlight">
+                            <textarea style="width: 100%;"><a href="#" class="badge"></a></textarea>
+                        </div>
+                    </div>
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <a href="#" class="badge" count="123"></a>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#demo-basic" class="qIcon biaoqian">数字徽标</a>
+                            </div>
+                            <p><code>.badge</code>标签添加自定义属性 <code>count</code> 值为number</p>
+                        </div>
+                        <div class="highlight">
+                            <textarea style="width: 100%;"><a href="#" class="badge" count="123"></a></textarea>
+                        </div>
+                    </div>
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <a href="#" class="badge" count="123" limited="99"></a>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#demo-basic" class="qIcon biaoqian">有限制的数字徽标</a>
+                            </div>
+                            <p><code>.badge</code>标签添加自定义属性 <code>limited</code> 值为number</p>
+                        </div>
+                        <div class="highlight">
+                            <textarea style="width: 100%;"><a href="#" class="badge" count="123" limited="99"></a></textarea>
+                        </div>
+                    </div>
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <a href="#" class="badge" count="123" limited="99"></a>
+                            <a href="#" class="badge success" count="123" limited="99"></a>
+                            <a href="#" class="badge error" count="123" limited="99"></a>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#demo-basic" class="qIcon biaoqian">颜色</a>
+                            </div>
+                            <p><code>.badge</code>默认</p>
+                            <p><code>.badge</code>添加 <code>.success</code>绿色</p>
+                            <p><code>.badge</code>添加 <code>.error</code>红色</p>
+                        </div>
+                        <div class="highlight">
+                            <textarea style="width: 100%; height: 100px;">
+<a href="#" class="badge" count="123" limited="99"></a>
+<a href="#" class="badge success" count="123" limited="99"></a>
+<a href="#" class="badge error" count="123" limited="99"></a>
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+@charset "UTF-8";
+/*
+* Pagination分页样式
+*
+* --------------------------------------------------
+*/
+
+/* Pagination分页 */
+
+.pagination {
+    font-size: $font-size-base;
+    @include user-select(none);
+
+    &:after {
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    &-total-text {
+        float: left;
+        height: $input-height;;
+        line-height: $input-height;;
+        margin-right: 10px;
+    }
+
+    &-item {
+        min-width: $input-height;
+        height: $input-height;;
+        float: left;
+        font-family: Arial;
+        line-height: $input-height;
+        text-align: center;
+        list-style: none;
+        border: 1px solid $input-border;
+        background-color: #fff;
+        margin-right: 8px;
+        @include user-select(none);
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: $gray;
+            margin: 0 6px;
+            @include transition(none);
+        }
+
+        &:hover {
+            @include transition(all .3s ease);
+            border-color: lighten($color-primary, 10%);
+
+            a {
+                color: lighten($color-primary, 10%);
+            }
+        }
+
+        &.current {
+            background-color: lighten($color-primary, 10%);
+            border-color: lighten($color-primary, 10%);
+
+            a,
+            &:hover a {
+                color: #fff;
+            }
+        }
+    }
+
+    &-jump-prev,
+    &-jump-next {
+
+        &:after {
+            content: '•••';
+            display: block;
+            letter-spacing: 2px;
+            color: $gray-light;
+            text-align: center;
+        }
+
+        &:hover {
+
+            &:after {
+                color: lighten($color-primary, 10%);
+                letter-spacing: -1px;
+            }
+        }
+    }
+
+    &-jump-prev {
+
+        &:hover {
+
+            &:after {
+                content: "<<";
+            }
+        }
+    }
+
+    &-jump-next {
+
+        &:hover {
+
+            &:after {
+                content: ">>";
+            }
+        }
+    }
+
+    &-prev,
+    &-jump-prev,
+    &-jump-next {
+        margin-right: 8px;
+    }
+
+    &-prev,
+    &-next,
+    &-jump-prev,
+    &-jump-next {
+        display: inline-block;
+        float: left;
+        min-width: $input-height;
+        height: $input-height;
+        font-family: Arial;
+        color: $gray;
+        list-style: none;
+        line-height: $input-height;
+        text-align: center;
+        @include transition(all .3s ease);
+        cursor: pointer;
+    }
+
+    &-prev,
+    &-next {
+        border: 1px solid $input-border;
+
+        a {
+            color: $gray-light;
+
+            &:after {
+                display: block;
+                height: $input-height -2px;
+                line-height: $input-height -2px;
+                text-align: center;
+            }
+        }
+
+        &:hover {
+            border-color: lighten($color-primary, 10%);
+
+            a {
+                color: lighten($color-primary, 10%);
+            }
+        }
+    }
+
+    &-prev {
+
+        a {
+
+            &:after {
+                content: '<';
+            }
+        }
+    }
+
+    &-next {
+
+        a {
+
+            &:after {
+                content: '>';
+            }
+        }
+    }
+
+    .select-choice .selected-option {
+        padding-right: 24px;
+    }
+
+    &-disabled {
+        cursor: not-allowed;
+        border-color: lighten($input-border, 5%);
+
+        a {
+            color: lighten($gray-light, 10%);
+            cursor: not-allowed;
+        }
+
+        &:hover {
+            border-color: lighten($input-border, 5%);
+
+            a {
+                color: lighten($gray-light, 10%);
+            }
+        }
+    }
+
+    &-slash {
+        margin: 0 10px 0 5px;
+    }
+
+    &-option {
+        float: left;
+        margin-left: 15px;
+    }
+
+    &-size-changer {
+        float: left;
+        margin-right: 10px;
+    }
+
+    &-quick-jumper {
+        float: left;
+        height: $input-height;
+        line-height: $input-height;
+
+        input {
+            width: 50px;
+            margin: 0 8px;
+        }
+    }
+
+    &-simple &-prev,
+    &-simple &-next {
+        border: 0;
+        height: 24px;
+        line-height: 24px;
+        margin: 0;
+        font-size: 18px;
+    }
+
+    &-simple &-simple-pager {
+        float: left;
+        margin-right: 8px;
+
+        input {
+            margin: 0 8px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border: 1px solid $input-border;
+            outline: none;
+            padding: 5px 8px;
+            width: 30px;
+            height: 24px;
+            text-align: center;
+            @include transition(border-color 0.3s ease);
+
+            &:hover {
+                border-color: lighten($color-primary, 10%);
+            }
+        }
+    }
+}
+
+.pagination {
+
+    &.mini &-total-text {
+        height: 20px;
+        line-height: 20px;
+    }
+
+    &.mini &-item {
+        border: 0;
+        margin: 0;
+        min-width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    &.mini &-prev,
+    &.mini &-next {
+        margin: 0;
+        min-width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border: 0;
+
+        a {
+            &:after {
+                height: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &.mini &-jump-prev,
+    &.mini &-jump-next {
+        height: 20px;
+        line-height: 20px;
+    }
+
+    &.mini {
+
+        .form-select {
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .select-choice {
+            height: 20px;
+        }
+
+        .selected-option {
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .select-dropdown {
+            top: 20px;
+        }
+    }
+
+
+    &.mini &-quick-jumper {
+        height: 20px;
+        line-height: 20px;
+
+        input {
+            width: 35px;
+            height: 20px;
+            line-height: 20px;
+            padding: 3px 5px;
+        }
+    }
+}
+

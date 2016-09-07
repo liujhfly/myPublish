@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+//
+// 变量
+// --------------------------------------------------
+
+
+//== 颜色
+//
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 20%) !default; // #333
+$gray-dark:              lighten($gray-base, 33.5%) !default;   // #555
+$gray:                   lighten($gray-base, 40%) !default; // #666
+$gray-light:             lighten($gray-base, 60%) !default; // #999
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+//清除颜色
+$color-clear: transparent !default; //transparent
+
+//常用颜色
+$color-primary:         #3d85cc !default; //蓝色 
+$color-primary-light:   #659be0 !default;
+$color-primary-lighter: #a2caee !default;
+
+$color-success:         #45be89 !default; //绿色
+$color-info:            #f1c40f !default; //橙色
+$color-error:           #f36a5a !default; //红色 新#f36a5a 原错误提示颜色#ca030a
+$color-alert:           #fcf8e3 !default; //淡黄色
+
+//导航菜单颜色
+$color-nav-bg-selected: #1c1a1e !default; //导航菜单折叠标题背景色
+$color-nav-bg: #252328 !default; //导航菜单背景色
+
+//提示图标、操作图标
+$color-icons: #cfcfcf !default; 
+//$color-icons-favorited: #ffae3c !default; //收藏图标已经收藏状态
+//$color-icons-desktop-yellow: $color-info !default;
+//$color-icons-desktop-red: $color-error !default;
+//$color-icons-desktop-green: $color-success !default;
+//$color-icons-desktop-green: $color-success !default;
+
+//文字链接的颜色
+$link-color: $color-primary !default; //#08C
+$link-hover-color: darken($link-color, 5%) !default; //#005580
+$link-visited-color: $link-color !default; //#08C
+
+//字体
+$font-family-base: "微软雅黑","Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif !default;
+$font-size-base: 12px !default;
+$font-size-normal: ceil(($font-size-base * 1.1666)) !default; // 14px
+$font-size-md: ceil(($font-size-base * 1.3333)) !default; // 16px
+$font-size-lg: ceil(($font-size-base * 1.5)) !default; // 18px
+$font-size-xlg: floor(($font-size-base * 1.666)) !default; // 20px
+$font-size-xxlg: ceil(($font-size-base * 2)) !default; // 24px
+$font-size-xxxlg: ceil(($font-size-base * 2.1666)) !default; // 26px
+
+
+//字的行高
+//** for use in components like buttons.
+$line-height-base:        1.5 !default; // 20/14
+//** for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//圆角
+$border-radius-base:        3px !default;
+
+//按钮
+$btn-gray-color:              #666 !default;
+$btn-gray-bg:                 #f5f5f5 !default;
+$btn-gray-border:             darken($btn-gray-bg, 10%) !default; //#ccc
+
+$btn-light-color:              #999 !default;
+$btn-light-bg:                 #fff !default;
+$btn-light-border:             darken($btn-light-bg, 10%) !default; //#ccc
+
+$btn-clear-color:              #999 !default;
+$btn-clear-bg:                 transparent !default;
+$btn-clear-border:             transparent !default; //#ccc
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $color-primary;
+$btn-primary-border:             darken($color-primary, 5%);
+
+$btn-disabled-color:  #ccc !default;
+$btn-disabled-bg: #f4f4f4 !default;
+$btn-disabled-border: #d9d9d9 !default;
+
+$btn-border-radius-base:         $border-radius-base !default;
+
+//表格
+$table-bg-hover:                #f5f5f5 !default;
+$table-bg-active:               $table-bg-hover !default;
+$table-border-color:            #ddd !default;
+$color-table-thead: #eceeef !default; //表格标题背景色
+$color-table-border:  #ddd !default; //表格边框颜色
+$color-table-hover: #eceeef !default; //表格hover颜色
+
+//表单
+//input select 默认高度
+$input-height: floor($line-height-computed * 1.6) !default;
+$input-default-width: 180px !default;
+
+$input-bg:                       #fff !default;
+$input-bg-disabled:              #f9f9f9 !default;
+$input-color:                    #666 !default;
+$input-color-placeholder:        #999 !default;
+$input-border:                   #ddd !default;
+$input-border-focus:             darken($input-border, 4%) !default;
+
+$legend-color:                   $gray-dark !default;
+$legend-border-color:            #e5e5e5 !default;
+
+//滑动输入条
+$slider-disabled: $input-bg-disabled !default;
+$slider-color: #fff !default;
+$slider-bg: $input-bg !default;
+
+//switch开关
+$switch-width: 44px !default;
+$switch-height: 22px !default;
+$switch-handle: 20px !default;
+
+$switch-lg-width: 58px !default;
+$switch-lg-height: 28px !default;
+$switch-lg-handle: 26px !default;
+
+$switch-sm-width: 36px !default;
+$switch-sm-height: 18px !default;
+$switch-sm-handle: 16px !default;
+
+//层次
+$zindex-navbar:            1000 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+
+//适配
+$screen-xs:                  480px !default;
+$screen-sm:                  768px !default;
+$screen-md:                  992px !default;
+$screen-lg:                  1200px !default;
+
+$screen-xs-max:              ($screen-sm - 1) !default;
+$screen-sm-max:              ($screen-md - 1) !default;
+$screen-md-max:              ($screen-lg - 1) !default;
+
+// Media queries breakpoints
+// Extra small screen / phone
+$screen-xs              : 480px;
+$screen-xs-min          : $screen-xs;
+$screen-xs-max          : ($screen-xs-min - 1);
+
+// Small screen / tablet
+$screen-sm              : 768px;
+$screen-sm-min          : $screen-sm;
+$screen-sm-max          : ($screen-sm-min - 1);
+
+// Medium screen / desktop
+$screen-md              : 992px;
+$screen-md-min          : $screen-md;
+$screen-md-max          : ($screen-md-min - 1);
+
+// Large screen / wide desktop
+$screen-lg              : 1200px;
+$screen-lg-min          : $screen-lg;
+$screen-lg-max          : ($screen-lg-min - 1);
+
+//百分比布局
+$grid-columns           : 24 !default;
+$grid-gutter-width      : 0  !default;
+
+// Container sizes
+$container-sm           : (720px + $grid-gutter-width);
+$container-md           : (940px + $grid-gutter-width);
+$container-lg           : (1140px + $grid-gutter-width);
+
+
+//分页
+$pagination-color:                     $link-color !default;
+$pagination-bg:                        #fff !default;
+$pagination-border:                    #ddd !default;
+
+$pagination-hover-color:               $link-hover-color !default;
+$pagination-hover-bg:                  $gray-lighter !default;
+$pagination-hover-border:              #ddd !default;
+
+$pagination-active-color:              #fff !default;
+$pagination-active-bg:                 $color-primary !default;
+$pagination-active-border:             $color-primary !default;
+
+$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           #ddd !default;
+
+//进度条
+$progress-bg:                 #f5f5f5 !default;
+$progress-bar-color:          #fff !default;
+$progress-border-radius:      $border-radius-base !default;
+$progress-bar-bg:             $color-primary !default;
+$progress-bar-success-bg:     $color-success !default;
+//$progress-bar-warning-bg:     $brand-warning !default;
+//$progress-bar-danger-bg:      $brand-danger !default;
+//$progress-bar-info-bg:        $brand-info !default;
+
+
+
+
+
+
+
+
+

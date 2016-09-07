@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="slider">
+        <article class="markdown">
+            <h1>
+                滑动输入条
+            </h1>
+
+            <p>说明</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-block">
+                            <input type="range" name="volume" min="0" max="100" value="38">
+                        </div>
+
+                        <div class="form-block">
+                            <input type="range" name="volume" min="0" max="100" value="38" disabled>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">基本range组件</a>
+                        </div>
+
+                        <p>使用<code>input</code>的属性<code>type="range"</code>,
+                            当不可用时,只需要增加属性<code>disabled</code>即可.</p>
+
+                    </div>
+                    <div class="highlight">
+                        <xmp>
+                            <input type="range" name="volume" min="0" max="100" value="38">
+                        </xmp>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-block">
+                            <div class="slider-icon-wrapper">
+                                <i class="left qIcon banshou"></i>
+                                <div class="form-slider">
+                                    <div class="slider-tooltip" style="left: 34%;">
+                                        <div class="inner">34</div>
+                                    </div>
+                                    <div class="slider-handle" style="left: 34%;"></div>
+                                    <div class="slider-track" style="left: 0%; width: 34%; visibility: visible;"></div>
+                                    <div class="slider-step"></div>
+                                    <div class="slider-mark">
+                                        <span class="begin">0%</span>
+                                        <span class="end">100%</span>
+                                    </div>
+                                </div>
+                                <i class="right qIcon mima"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">自定义滑动输入条</a>
+                        </div>
+
+                        <p>需要配合图标使用时,需要在外层增加一个类名为<code>slider-icon-wrapper</code>的元素。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-block">
+                            <div class="form-slider">
+                                <div class="slider-tooltip" style="left: 34%;">
+                                    <div class="inner">34</div>
+                                </div>
+                                <div class="slider-handle" style="left: 34%;"></div>
+                                <div class="slider-track" style="left: 0%; width: 34%; visibility: visible;"></div>
+                                <div class="slider-step"></div>
+                                <div class="slider-mark">
+                                    <span class="begin">0%</span>
+                                    <span class="end">100%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">自定义滑动输入条</a>
+                        </div>
+
+                        <p>基本自定义滑动条。需要配合js代码实现功能。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

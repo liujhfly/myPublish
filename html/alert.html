@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="alert">
+        <article class="markdown">
+            <h1>
+                警告提示
+            </h1>
+
+            <p>警告提示，展现需要关注的信息。</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="alert-demo-basic">
+                            <div class="alert alert-success alert-no-icon">
+                                <span class="alert-message">成功提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">基本</a>
+                        </div>
+
+                        <p>最简单的用法，适用于简短的警告提示。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+                <div class="code-box expand" id="demo-closable">
+                    <div class="code-box-demo">
+
+                        <div class="alert-demo-closable">
+                            <div class="alert alert-warn alert-no-icon">
+                                <span class="alert-message">警告提示文案</span>
+                                <span class="alert-description"></span>
+                                <a class="alert-close-icon"><i class="qIcon close"></i></a>
+                            </div>
+                            <div class="alert alert-error alert-with-description alert-no-icon">
+                                <span class="alert-message">错误提示文案</span>
+                                <span class="alert-description">错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍</span>
+                                <a class="alert-close-icon"><i class="qIcon close"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">可关闭的警告提示</a>
+                        </div>
+
+                        <p>显示关闭按钮，点击可关闭警告提示。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+                <div class="code-box expand" id="demo-icon">
+                    <div class="code-box-demo">
+
+                        <div class="alert-demo-icon">
+                            <div class="alert alert-success">
+                                <i class="alert-icon qIcon closeCircle"></i><span class="alert-message">成功提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                            <div class="alert alert-info">
+                                <i class="alert-icon qIcon closeCircle"></i><span class="alert-message">消息提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                            <div class="alert alert-warn">
+                                <i class="alert-icon qIcon closeCircle"></i><span class="alert-message">警告提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                            <div class="alert alert-error">
+                                <i class="alert-icon qIcon closeCircle"></i><span class="alert-message">错误提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">四种样式</a>
+                        </div>
+
+                        <p>共有四种样式 <code>success</code>、<code>info</code>、<code>warn</code>、<code>error</code>。</p>
+
+                    </div>
+
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+                <div class="code-box expand" id="demo-operation">
+                    <div class="code-box-demo">
+
+                        <div class="alert-demo-operation">
+                            <div class="alert alert-info alert-width-operation alert-no-icon">
+                                <span class="alert-message">消息提示文案</span>
+                                <span class="alert-description"></span>
+                                <span class="alert-operate-btn">
+                                    <a class="btn btn-gray" href="JavaScript:void(0)">操作一</a><a class="btn" href="JavaScript:void(0)">操作二</a>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">自定义操作</a>
+                        </div>
+
+                        <p>可以自定义操作 <code>btn</code>。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-style">
+                    <div class="code-box-demo">
+
+                        <div class="alert-demo-style">
+                            <div class="alert alert-success alert-no-icon">
+                                <span class="alert-message">成功提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                            <div class="alert alert-info alert-no-icon">
+                                <span class="alert-message">消息提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                            <div class="alert alert-warn alert-no-icon">
+                                <span class="alert-message">警告提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                            <div class="alert alert-error alert-no-icon">
+                                <span class="alert-message">错误提示文案</span>
+                                <span class="alert-description"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">四种样式</a>
+                        </div>
+
+                        <p>共有四种样式 <code>success</code>、<code>info</code>、<code>warn</code>、<code>error</code>。</p>
+
+                    </div>
+
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+                <div class="code-box expand" id="demo-description">
+                    <div class="code-box-demo">
+
+                        <div class="alert-demo-closable">
+                            <div class="alert alert-success alert-with-description alert-no-icon">
+                                <span class="alert-message">成功提示文案</span>
+                                <span class="alert-description">成功提示的辅助性文字介绍</span>
+                            </div>
+                            <div class="alert alert-info alert-with-description alert-no-icon">
+                                <span class="alert-message">消息提示文案</span>
+                                <span class="alert-description">消息提示的辅助性文字介绍</span>
+                            </div>
+                            <div class="alert alert-warn alert-with-description alert-no-icon">
+                                <span class="alert-message">警告提示文案</span>
+                                <span class="alert-description">警告提示的辅助性文字介绍</span>
+                            </div>
+                            <div class="alert alert-error alert-with-description alert-no-icon">
+                                <span class="alert-message">错误提示文案</span>
+                                <span class="alert-description">错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">含有辅助性文字介绍</a>
+                        </div>
+
+                        <p>含有辅助性文字介绍的警告提示。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+                <div class="code-box expand" id="demo-closable">
+                    <div class="code-box-demo">
+
+                        <div class="alert-demo-closable">
+                            <div class="alert alert-info alert-no-icon">
+                                <span class="alert-message">消息提示文案</span>
+                                <span class="alert-description"></span>
+                                <a class="alert-close-icon">不再提醒</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">自定义关闭</a>
+                        </div>
+
+                        <p>可以自定义关闭，自定义的文字会替换原先的关闭 <code>qIcon</code>。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

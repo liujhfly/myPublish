@@ -1,0 +1,65 @@
+@charset "UTF-8";
+$collapse-header-height:       38px !default;
+/*
+* Collapse折叠面板样式
+*
+* --------------------------------------------------
+*/
+
+/* Collapse折叠面板 */
+.collapse {
+  background-color: $btn-gray-bg;
+  border-radius: 3px;
+  border: 1px solid $btn-gray-border;
+  .collapse-item {
+    border-top: 1px solid $btn-gray-border;
+    &:first-child {
+      border-top: 0 none;
+    }
+    .collapse-header {
+      cursor: pointer;
+      display: block;
+      position: relative;
+      padding-left: 32px;
+      height: $collapse-header-height;
+      line-height: $collapse-header-height;
+      font-size: $font-size-normal;
+      color: $btn-gray-color;
+      .solidArrowDown {
+        position: absolute;
+        top: 0;
+        left: 16px;
+        font-size: $font-size-base;
+        @include transition(transform .24s ease);
+        @include rotate(270deg);
+      }
+    }
+    .collapse-header-active {
+      .solidArrowDown {
+        @include rotate(360deg);
+      }
+    }
+    .collapse-content {
+      display: none;
+      padding: 0 16px;
+      font-size: $font-size-normal;
+      color: $btn-gray-color;
+      background-color: #fff;
+      .collapse-content-box {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .collapse-content-active {
+      display: block;
+    }
+  }
+}
+
+
+
+
+

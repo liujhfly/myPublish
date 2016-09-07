@@ -1,0 +1,118 @@
+@charset "UTF-8";
+$success-bg:                   #f3faf0 !default;
+$success-border:               #e7f6e1 !default;
+$success-color:                #87d068 !default;
+$info-bg:                      #eaf8fe !default;
+$info-border:                  #d5f1fd !default;
+$info-color:                   #2db7f5 !default;
+$warn-bg:                      #fff7e6 !default;
+$warn-border:                  #fec !default;
+$warn-color:                   #fa0 !default;
+$error-bg:                     #ffeee6 !default;
+$error-border:                 #fdc !default;
+$error-color:                  #f50 !default;
+$line-height-alert-operate:    28px !default;//与右侧按钮高度一致
+/*
+* Alert警告提示样式
+*
+* --------------------------------------------------
+*/
+
+/* Alert警告提示 */
+.alert {
+  position: relative;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  color: $gray;
+  line-height: 16px;
+  border-width: 1px;
+  border-style: solid;
+  @include border-radius($border-radius-base);
+  .alert-close-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -6px;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    @include transition(color .3s ease);
+    .close {
+      color: $gray-light;
+      @include transition(color .3s ease);
+    }
+    &:hover {
+      .close {
+        color: $gray;
+      }
+    }
+  }
+  .alert-icon {
+    position: relative;
+    top: 1px;
+    margin-right: 8px;
+    font-size: $font-size-normal;
+    line-height: 1;
+  }
+  .alert-operate-btn {
+    float: right;
+  }
+}
+
+.alert-success {
+  background-color: $success-bg;
+  border-color: $success-border;
+  .alert-icon {
+    color: $success-color;
+  }
+}
+
+.alert-info {
+  background-color: $info-bg;
+  border-color: $info-border;
+  .alert-icon {
+    color: $info-color;
+  }
+}
+
+.alert-warn {
+  background-color: $warn-bg;
+  border-color: $warn-border;
+  .alert-icon {
+    color: $warn-color;
+  }
+}
+
+.alert-error {
+  background-color: $error-bg;
+  border-color: $error-border;
+  .alert-icon {
+    color: $error-color;
+  }
+}
+
+.alert-with-description {
+  .alert-message {
+    display: block;
+    font-size: $font-size-normal;
+    line-height: $line-height-base;
+  }
+  .alert-description {
+    display: block;
+    color: $gray-light;
+    line-height: $font-size-normal * $line-height-base;
+  }
+  .alert-close-icon {
+    top: 17px;
+  }
+}
+
+.alert-width-operation {
+  line-height: $line-height-alert-operate;
+}
+
+
+
+
+

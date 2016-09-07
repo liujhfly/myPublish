@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="affix">
+        <article class="markdown">
+            <h1>固钉</h1>
+            <p>将页面元素钉在可视范围。</p>
+            <h2>何时使用</h2>
+            <p>当内容区域比较长，需要滚动页面时，这部分内容对应的操作或者导航需要在滚动范围内始终展现。<br>常用于侧边菜单和按钮组合。页面可视范围过小时，慎用此功能以免遮挡页面内容。</p>
+            <h2 class="component-demos">代码演示</h2>
+            <div class="code-boxes">
+                <div class="col-12">
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <div class="btn affix">固定在顶部</div>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#" class="qIcon biaoqian">基本</a>
+                            </div>
+                            <p>最简单的用法 在dom上加 <code>.affix</code> <code>offset</code>不设置</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <div class="btn affix" offset="100">固定在离顶部100px处</div>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#" class="qIcon biaoqian">偏移</a>
+                            </div>
+                            <p>达到一定的偏移量才触发。<code>offset="100"</code></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>API</h2>
+            <table class="api">
+                <thead>
+                <tr>
+                    <th>参数</th>
+                    <th>说明</th>
+                    <th>类型</th>
+                    <th>默认值</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>offset</td>
+                    <td>顶部偏移量</td>
+                    <td>number</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+
+</html>

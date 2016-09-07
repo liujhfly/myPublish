@@ -1,0 +1,410 @@
+@charset "UTF-8";
+/*
+* 选择器和级联选择器样式
+*
+* --------------------------------------------------
+*/
+
+/* 选择框样式 */
+
+.select-wrapper {
+    width: 141px;
+    display: inline-block;
+    border: 1px solid $input-border;
+    height: $input-height;
+    vertical-align: middle;
+
+    select {
+        width: 140px;
+        border: 0;
+        height: $input-height;
+        background: none;
+        vertical-align: top;
+        -webkit-border-radius: 0;
+
+        &.disabled,
+        &[disabled] {
+            cursor: not-allowed;
+        }
+    }
+
+    option {
+        min-width: 140px;
+    }
+}
+
+/* 自定义select选择框 */
+
+.form-select,
+.form-multi-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: $input-height;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: #fff;
+
+    &.open {
+
+
+        .icon-arrow-line {
+
+            &::before {
+                top: 6px;
+                @include rotate(225deg);
+            }
+        }
+    }
+
+    &.disabled {
+
+        .select-choice {
+            background-color: $input-bg-disabled;
+            cursor: not-allowed;
+
+            .selected-clear {
+                visibility: hidden;
+            }
+
+            .selected-option {
+                color: $input-color-placeholder;
+            }
+        }
+    }
+
+    &.input-big {
+        padding: 0;
+
+        .select-choice {
+            height: $input-height * 1.2;
+
+        }
+
+        .select-dropdown {
+            top: $input-height * 1.2;
+        }
+    }
+}
+
+.select-choice {
+    position: relative;
+    display: block;
+    height: $input-height;
+    text-decoration: none;
+    //background-color: #fff;
+    border: 1px solid $input-border;
+    white-space: nowrap;
+    @include user-select(none);
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+        border-color: darken($input-border, 5%);
+    }
+
+    .selected-clear {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        display: inline-block;
+        margin-top: -9px;
+        cursor: pointer;
+    }
+
+    .selected-option {
+        display: block;
+        line-height: $input-height;
+        padding: 0 36px 0 8px;
+        @include text-overflow();
+
+        &.no-clear {
+            padding-right: 18px;
+        }
+    }
+
+    .select-arrow {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        display: inline-block;
+        margin-top: -9px;
+    }
+
+    .placeholder ~ .selected-clear,
+    .has-placeholder ~ .selected-clear {
+        visibility: hidden;
+    }
+}
+
+.select-dropdown {
+    display: none;
+    position: absolute;
+    top: $input-height;
+    left: 0;
+    width: 100%;
+    border: 1px solid $input-border;
+    border-top: 0;
+    background-color: #fff;
+    z-index: $zindex-dropdown;
+
+    &.open {
+        display: block;
+    }
+
+    .form-search {
+        margin: 2px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+}
+
+.select-options {
+    position: relative;
+    max-height: 160px;
+    background-color: #fff;
+    overflow-y: auto;
+
+    .option {
+        position: relative;
+        width: 100%;
+        font-size: $font-size-base;
+        @include text-overflow();
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f9f9f9;
+
+            .icons {
+
+            }
+        }
+
+        &.selected {
+            color: #fff;
+            background-color: $color-primary;
+        }
+
+        &.disabled {
+            color: $input-color-placeholder;
+            cursor: not-allowed;
+        }
+
+        .icons {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            margin-top: -9px;
+        }
+    }
+}
+
+/* 多选选择器 */
+.selected-option-item {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    color: #999;
+    line-height: $line-height-base;
+    background-color: darken($input-bg-disabled, 3%);
+    padding: 1px 18px 1px 4px;
+    margin-right: 3px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 9px;
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        vertical-align: middle;
+        border: 0;
+        background-color: $color-icons;
+    }
+
+    &::before {
+        @include rotate(45deg);
+    }
+
+    &::after {
+        @include rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+        background-color: darken($color-icons, 10%);
+    }
+}
+
+.select-options-add {
+    position: relative;
+    display: block;
+    line-height: inherit;
+    padding: 4px 8px;
+    cursor: pointer;
+
+    input {
+        width: 100%;
+        padding-right: 20px;
+        border: 0;
+        border-bottom: 1px solid $input-border;
+    }
+
+    .icons {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -9px;
+    }
+}
+
+/* 级连选择 */
+.form-cascader {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: $input-height;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: #fff;
+
+    * {
+        @include box-sizing(border-box);
+    }
+
+    &.open {
+
+
+        .icon-arrow-line {
+
+            &::before {
+                top: 6px;
+                @include rotate(225deg);
+            }
+        }
+
+    }
+
+    &.disabled {
+
+        .cascader-choice {
+            background-color: $input-bg-disabled;
+            cursor: not-allowed;
+
+            .selected-clear {
+                visibility: hidden;
+            }
+
+            .selected-option {
+                color: $input-color-placeholder;
+            }
+        }
+    }
+}
+
+.cascader-choice {
+    position: relative;
+    display: block;
+    height: $input-height + 2px;
+    text-decoration: none;
+    //background-color: #fff;
+    border: 1px solid $input-border;
+    white-space: nowrap;
+    @include user-select(none);
+    cursor: pointer;
+    overflow: hidden;
+
+    .selected-option {
+        display: block;
+        line-height: $input-height;
+        padding: 0 36px 0 8px;
+        @include text-overflow();
+    }
+
+    .selected-clear {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        display: inline-block;
+        margin-top: -9px;
+        cursor: pointer;
+    }
+
+    .select-arrow {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        display: inline-block;
+        margin-top: -9px;
+        //cursor: pointer;
+    }
+
+    .placeholder ~ .selected-clear,
+    .has-placeholder ~ .selected-clear {
+        visibility: hidden;
+    }
+}
+
+.cascader-dropdown {
+    display: none;
+    position: absolute;
+    height: 180px;
+    border: 1px solid $input-border;
+    background: #fff;
+    @include border-radius(3px);
+    @include box-shadow(0 0 4px rgba(0,0,0,0.17));
+    white-space: nowrap;
+    letter-spacing:-4px;
+    overflow: hidden;
+    z-index: $zindex-dropdown;
+}
+
+.cascader-menu {
+    display: inline-block;
+    min-width: 110px;
+    height: 180px;
+    vertical-align: top;
+    list-style: none;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid $input-border;
+    overflow: auto;
+
+    &:last-child {
+        border-right-color: transparent;
+        margin-right: -1px;
+    }
+
+    .option {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 7px 16px;
+        cursor: pointer;
+        overflow: hidden;
+        @include transition(all .3s ease);
+
+        &.selected {
+            background-color: lighten($color-primary, 30%);
+        }
+
+        &:hover {
+            background-color: lighten($color-primary, 40%);
+
+            &.selected {
+                background-color: lighten($color-primary, 30%);
+            }
+        }
+    }
+}
+
+
+

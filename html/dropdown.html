@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="dropdown">
+        <article class="markdown">
+            <h1>
+                下拉菜单
+            </h1>
+
+            <p>向下弹出的列表。</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+                        <div class="dropdown-demo dropdown-demo-basic">
+                            <a class="dropdown-link" href="javascript:void(0)">
+                                <span>触发链接 </span><i class="qIcon arrowDown"></i>
+                            </a>
+                            <div class="dropdown">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第一个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第二个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item-divider"></li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第三个菜单项</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">基本</a>
+                        </div>
+
+                        <p>最简单的下拉菜单。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-trigger">
+                    <div class="code-box-demo">
+                        <div class="dropdown-demo dropdown-demo-trigger">
+                            <a class="dropdown-link" href="javascript:void(0)">
+                                <span>点击触发 </span><i class="qIcon arrowDown"></i>
+                            </a>
+                            <div class="dropdown">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第一个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第二个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item-divider"></li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第三个菜单项</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-trigger" class="qIcon biaoqian">触发方式</a>
+                        </div>
+
+                        <p>默认是移入触发菜单，可以点击触发。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-button">
+                    <div class="code-box-demo">
+                        <div class="dropdown-demo dropdown-demo-button">
+                            <div class="btn-group dropdown-button">
+                                <button type="button" class="btn">某功能按钮</button>
+                                <button type="button" class="btn"><i class="qIcon arrowDown"></i></button>
+                            </div>
+                            <div class="dropdown">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第一个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第二个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第三个菜单项</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-item" class="qIcon biaoqian">带下拉框的按钮</a>
+                        </div>
+
+                        <p>左边是按钮，右边是额外的相关功能菜单。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-item">
+                    <div class="code-box-demo">
+                        <div class="dropdown-demo dropdown-demo-item">
+                            <a class="dropdown-link" href="javascript:void(0)">
+                                <span>鼠标移入 </span><i class="qIcon arrowDown"></i>
+                            </a>
+                            <div class="dropdown">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第一个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第二个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item-divider"></li>
+                                    <li class="dropdown-menu-item dropdown-menu-item-disabled">第三个菜单项(不可用)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-item" class="qIcon biaoqian">其他元素</a>
+                        </div>
+
+                        <p>分割线和不可用菜单项。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-event">
+                    <div class="code-box-demo">
+                        <div class="dropdown-demo dropdown-demo-event">
+                            <a class="dropdown-link" href="javascript:void(0)">
+                                <span>鼠标移入，点击菜单 </span><i class="qIcon arrowDown"></i>
+                            </a>
+                            <div class="dropdown">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-item">
+                                        <a href="javascript:void(0)">第一个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="javascript:void(0)">第二个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="javascript:void(0)">第三个菜单项</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-item" class="qIcon biaoqian">其他元素</a>
+                        </div>
+
+                        <p>分割线和不可用菜单项。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-sub-menu">
+                    <div class="code-box-demo">
+                        <div class="dropdown-demo dropdown-demo-sub-menu">
+                            <a class="dropdown-link" href="javascript:void(0)">
+                                <span>多级菜单 </span><i class="qIcon arrowDown"></i>
+                            </a>
+                            <div class="dropdown">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第一个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">第二个菜单项</a>
+                                    </li>
+                                    <li class="dropdown-menu-submenu">
+                                        <div class="dropdown-menu-submenu-title">子菜单<i class="qIcon arrowRight"></i></div>
+                                        <ul class="dropdown-menu dropdown-menu-sub">
+                                            <li class="dropdown-menu-item">
+                                                <a href="#">第三个菜单项</a>
+                                            </li>
+                                            <li class="dropdown-menu-item">
+                                                <a href="#">第四个菜单项</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-item" class="qIcon biaoqian">多级菜单</a>
+                        </div>
+
+                        <p>传入的菜单里有多个层级。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="input-number">
+        <article class="markdown">
+            <h1>
+                数字输入框
+            </h1>
+
+            <p>说明</p>
+
+        </article>
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <input type="number" placeholder="请输入数字">
+                        <input type="number" disabled placeholder="请输入数字">
+
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">基本数字输入框</a>
+                        </div>
+
+                        <p>使用<code>input</code>的属性<code>type="number"</code>,
+                            当不可用时,只需要增加属性<code>disabled</code>或设置属性<code>class="disabled"</code>即可.</p>
+
+                    </div>
+                    <div class="highlight">
+                        <xmp>
+                            <input type="number" placeholder="请输入数字">
+                        </xmp>
+                        <xmp>
+                            <input type="number" disabled placeholder="请输入数字">
+                        </xmp>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-block">
+                            <div class="input-number-one">
+                                <button class="minus">-</button>
+                                <input type="number" class="num" value="1">
+                                <button class="plus">+</button>
+                            </div>
+                            <span class="error">信息验证未通过</span>
+                        </div>
+                        <div class="form-block">
+                            <div class="input-number-one">
+                                <button class="minus disabled">-</button>
+                                <input type="number" class="num" value="1">
+                                <button class="plus">+</button>
+                            </div>
+                        </div>
+                        <div class="form-block">
+                            <div class="input-number-one disabled">
+                                <button class="minus">-</button>
+                                <input type="number" class="num" value="1" disabled>
+                                <button class="plus">+</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">数字输入框二</a>
+                        </div>
+
+                        <p>数字输入按钮在输入框左右两侧。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-block">
+                            <div class="input-number-two">
+                                <input type="number" class="num" value="1">
+
+                                <div class="control">
+                                    <button class="plus">+</button>
+                                    <span class="line"></span>
+                                    <button class="minus">-</button>
+                                </div>
+                            </div>
+                            <span class="error">信息验证未通过</span>
+                        </div>
+
+                        <div class="form-block">
+                            <div class="input-number-two">
+                                <input type="number" class="num" value="1">
+
+                                <div class="control">
+                                    <button class="plus disabled">+</button>
+                                    <span class="line"></span>
+                                    <button class="minus">-</button>
+                                </div>
+                            </div>
+                            <span class="error">信息验证未通过</span>
+                        </div>
+
+                        <div class="form-block">
+                            <div class="input-number-two disabled">
+                                <input type="number" class="num" value="1" disabled>
+
+                                <div class="control">
+                                    <button class="plus">+</button>
+                                    <span class="line"></span>
+                                    <button class="minus">-</button>
+                                </div>
+                            </div>
+                            <span class="error">信息验证未通过</span>
+                        </div>
+
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">数字输入框样式一</a>
+                        </div>
+
+                        <p>数字输入按钮在输入框右侧。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

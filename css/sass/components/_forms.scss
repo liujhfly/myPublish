@@ -1,0 +1,850 @@
+@charset "UTF-8";
+/*
+* 表单样式
+*
+* --------------------------------------------------
+*/
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: $line-height-computed;
+    font-size: ($font-size-base * 1.5);
+    line-height: inherit;
+    color: $legend-color;
+    border: 0;
+    border-bottom: 1px solid $legend-border-color;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    //margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.placeholder {
+    color: $input-color-placeholder;
+}
+
+input[type="search"] {
+    @include box-sizing(border-box);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="file"] {
+    display: block;
+}
+
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    @include tab-focus;
+}
+
+output {
+    display: block;
+    padding-top: 7px;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $input-color;
+}
+
+html input[disabled],
+html input.disabled {
+    background-color: $input-bg-disabled;
+    cursor: not-allowed;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    line-height: normal;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"].disabled,
+input[type="checkbox"].disabled,
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+    cursor: not-allowed;
+}
+
+input,
+textarea {
+    display: inline-block;
+    width: $input-default-width;
+    height: $input-height;
+    font-size: $font-size-base;
+    color: $input-color;
+    line-height: $line-height-base;
+    padding: 4px 8px;
+    border: 1px solid $input-border;
+    background-color: $input-bg;
+    background-image: none;
+    border-radius: 0;
+    @include box-sizing(border-box);
+
+    &:hover {
+        border-color: darken($input-border, 5%);
+    }
+
+    @include placeholder;
+
+    &::-ms-expand {
+        border: 0;
+        background-color: transparent;
+    }
+
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        background-color: $input-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: not-allowed;
+    }
+}
+
+
+.error {
+    display: inline-block;
+    font-size: $font-size-base;
+    color: $color-error;
+    line-height: $line-height-base;
+    padding: 5px 8px;
+}
+.error-block {
+    font-size: $font-size-base;
+    color: $color-error;
+    line-height: $line-height-base;
+    padding: 5px 8px;
+}
+
+
+input,
+textarea,
+.form-select,
+.form-multi-select {
+
+    &.input-default {
+        width: $input-default-width;
+    }
+
+    &.input-long {
+        width: 280px;
+    }
+
+    &.input-short {
+        width: 80px;
+    }
+
+    &.input-shorter {
+        width: 50px;
+    }
+
+    &.input-block {
+        width: 100%;
+    }
+
+    &.input-big {
+        height: $input-height * 1.2;
+        font-size: $font-size-normal;
+        padding: 6px 8px;
+    }
+
+    &.input-small {
+        height: $input-height * 0.8;
+        padding: 3px 5px;
+    }
+}
+
+textarea {
+    min-height: 50px;
+}
+
+.label-right {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.form-inline {
+    position: relative;
+    display: inline-block;
+    padding: 8px 4px;
+
+    label,
+    .label {
+        display: inline-block;
+        padding-right: 5px;
+    }
+}
+
+.form-block {
+    @include clearfix();
+    display: block;
+    padding: 8px 5px;
+
+    label,
+    .label {
+        display: inline-block;
+        text-align: right;
+        vertical-align: middle;
+        padding: 5px 8px;
+    }
+
+    .text {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+    .error-block {
+        position: absolute;
+        padding: 0;
+
+    }
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: collapse;
+
+    .addon,
+    .addon-big,
+    .addon-small {
+        display: inline-block;
+        height: $input-height;
+        font-size: $font-size-base;
+        color: $gray;
+        text-align: center;
+        line-height: $line-height-base;
+        font-weight: normal;
+        vertical-align: middle;
+        padding: 4px 8px;
+        border: 1px solid $input-border;
+        border-right: 0;
+        background-color: $input-bg-disabled;
+        border-radius: 0;
+        @include box-sizing(border-box);
+
+        &.last {
+            border-right: 1px solid $input-border;
+        }
+    }
+
+    input {
+        vertical-align: middle;
+    }
+
+    input + .addon,
+    input + .addon-big,
+    input + .addon-small {
+        border-left: 0;
+    }
+
+    input + input {
+        margin-left: -1px;
+    }
+
+    .addon-big {
+        height: $input-height * 1.2;
+        font-size: $font-size-normal;
+        padding: 6px 8px;
+    }
+
+    .addon-small {
+        height: $input-height * 0.8;
+        line-height: $line-height-base * 0.8;
+        padding: 3px 5px;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        
+        input {
+            background-color: $input-bg-disabled;
+            color: lighten($gray-light, 6%);
+        }
+
+        .addon {
+            color: $input-border;
+            cursor: not-allowed;
+        }
+    }
+
+}
+
+
+
+/* 单选框样式 */
+.radio {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    white-space: nowrap;
+    outline: none;
+    cursor: pointer;
+}
+
+.radio-inline {
+    display: inline-block;
+    padding: 4px 0;
+}
+
+.radio-block {
+    display: block;
+    margin-bottom: ($line-height-computed / 4);
+}
+
+.style-radio {
+    position: relative;
+    top: -1px;
+    left: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    border: 1px solid $input-border;
+    @include border-radius(50%);
+    background-color: #fff;
+    @include transition(border-color .3s ease-out, background-color .3s ease-out);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        @include border-radius(50%);
+    }
+
+    &:hover {
+        border: 1px solid darken($input-border, 10%);
+    }
+}
+
+.input-radio {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+
+        + .style-radio {
+            border-color: lighten($color-primary, 12%);
+            background-color: lighten($color-primary, 12%);
+        }
+    }
+}
+
+html .input-radio {
+    opacity: 0;
+}
+
+.radio-checked .style-radio {
+    border-color: lighten($color-primary, 12%);
+    background-color: lighten($color-primary, 12%);
+}
+
+.radio-disabled {
+    cursor: not-allowed;
+
+    .style-radio {
+        background-color: #f4f4f4;
+        cursor: not-allowed;
+
+        &::after {
+            background-color: #f4f4f4;
+        }
+
+        &:hover {
+            border: 1px solid $input-border;
+        }
+    }
+
+    .input-radio {
+        cursor: not-allowed;
+
+        &:checked {
+
+            + .style-radio {
+                border-color: $input-border;
+                background-color: #f4f4f4;
+
+                &::after {
+                    top: 3px;
+                    left: 3px;
+                    width: 6px;
+                    height: 6px;
+                    background-color: $input-border;
+                }
+            }
+        }
+    }
+
+    &.radio-checked {
+
+        .style-radio {
+            border-color: $input-border;
+            background-color: #f4f4f4;
+
+            &::after {
+                top: 3px;
+                left: 3px;
+                width: 6px;
+                height: 6px;
+                background-color: $input-border;
+            }
+        }
+    }
+}
+
+/* 单选扩展样式 */
+.radio-group {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.radio-tabs {
+    position: relative;
+    display: inline-block;
+    font-size: $font-size-base;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: -4px;
+    cursor: pointer;
+    @include user-select(none);
+
+    &.radio-checked {
+
+        .style-radio-tabs {
+            border-bottom-color: $color-primary;
+        }
+    }
+
+    .input-radio:checked {
+
+        ~ .style-radio-tabs {
+            border-bottom-color: $color-primary;
+        }
+    }
+
+    &.radio-disabled {
+        color: $gray-light;
+        cursor: not-allowed;
+
+        &.radio-checked {
+
+            .style-radio-tabs {
+                border-bottom-color: lighten($color-primary, 15%);
+            }
+        }
+
+        .input-radio:checked {
+
+            ~ .style-radio-tabs {
+                border-bottom-color: lighten($color-primary, 15%);
+            }
+        }
+
+        .style-radio-tabs {
+
+            &:hover {
+                color: $gray-light;
+            }
+        }
+    }
+
+    .input-radio[disabled] {
+
+        &:checked {
+
+            ~ .style-radio-tabs {
+                cursor: not-allowed;
+                color: $gray-light;
+                border-bottom-color: lighten($color-primary, 15%);
+
+                &:hover {
+                    color: $gray-light;
+                }
+            }
+        }
+
+        ~ .style-radio-tabs {
+            cursor: not-allowed;
+            color: $gray-light;
+            border-bottom-color: lighten($input-border, 5%);
+
+            &:hover {
+                color: $gray-light;
+            }
+        }
+
+    }
+}
+
+.style-radio-tabs {
+    display: inline-block;
+    width: 40px;
+    vertical-align: middle;
+    height: $input-height;
+    line-height: $input-height;
+    padding: 0 10px;
+    border-bottom: 2px solid $input-border;
+
+    &:hover {
+        color: $color-primary;
+    }
+}
+
+
+
+/* 多选框样式 */
+.checkbox {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    white-space: nowrap;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-inline {
+    display: inline-block;
+    padding: 4px 0;
+}
+
+.checkbox-block {
+    display: block;
+    margin-bottom: ($line-height-computed / 4);
+}
+
+.style-checkbox {
+    position: relative;
+    top: -1px;
+    left: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    border: 1px solid $input-border;
+    @include border-radius(2px);
+    background-color: #fff;
+    @include transition(border-color .3s ease-out, background-color .3s ease-out);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 4px;
+        display: inline-block;
+        width: 5px;
+        height: 8px;
+        border: 2px solid #fff;
+        border-top: none;
+        border-left: none;
+        opacity: 0;
+        @include rotate(45deg);
+        @include transition(opacity .3s ease-out);
+    }
+
+    &:hover {
+        border: 1px solid darken($input-border, 10%);
+    }
+}
+
+.input-checkbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+
+        + .style-checkbox {
+            border-color: lighten($color-primary, 12%);
+            background-color: lighten($color-primary, 12%);
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+html .input-checkbox {
+    opacity: 0;
+}
+
+.checkbox-checked .style-checkbox {
+    border-color: lighten($color-primary, 12%);
+    background-color: lighten($color-primary, 12%);
+
+    &::after {
+        opacity: 1;
+    }
+}
+
+.checkbox-disabled {
+    cursor: not-allowed;
+
+    .style-checkbox {
+        background-color: #f4f4f4;
+        cursor: not-allowed;
+
+        &::after {
+            background-color: #f4f4f4;
+        }
+
+        &:hover {
+            border: 1px solid $input-border;
+        }
+    }
+
+    .input-checkbox {
+        cursor: not-allowed;
+
+        &:checked {
+
+            + .style-checkbox {
+                border-color: $input-border;
+                background-color: #f4f4f4;
+
+                &::after {
+                    top: 1px;
+                    left: 4px;
+                    width: 5px;
+                    height: 8px;
+                    border-color: $input-border;
+                }
+            }
+        }
+    }
+
+    &.checkbox-checked {
+
+        .style-checkbox {
+            border-color: $input-border;
+            background-color: #f4f4f4;
+
+            &::after {
+                top: 1px;
+                left: 4px;
+                width: 5px;
+                height: 8px;
+                border-color: $input-border;
+            }
+        }
+    }
+}
+
+/* 搜索框 */
+.form-search {
+    position: relative;
+
+    .search-input {
+        padding: 0 24px 0 8px;
+    }
+
+    .icons {
+        position: absolute;
+        top: 50%;
+        right: 3px;
+        margin-top: -9px;
+        cursor: pointer;
+    }
+}
+
+/* 购物车输入数量组件 */
+.input-number-one {
+    position: relative;
+    display: inline-block;
+    height: $input-height;
+    font-size: 0;
+    line-height: 16px;
+
+    .minus,
+    .plus {
+        font-size: $font-size-normal;
+        width: 20px;
+        color: $gray;
+        padding: 5px;
+        background: none;
+        background-color: $input-bg-disabled;
+        border: 1px solid $input-border;
+
+        &.disabled {
+            cursor: not-allowed;
+            color: $input-border;
+
+        }
+    }
+
+    input {
+        width: 50px;
+        height: $input-height;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        text-align: center;
+        padding: 5px;
+        margin: 0;
+        border: none;
+        border-top: 1px solid $input-border;
+        border-bottom: 1px solid $input-border;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+
+        input {
+            color: lighten($gray-light, 6%);
+            background-color: $input-bg-disabled;
+        }
+
+        .minus,
+        .plus {
+            cursor: not-allowed;
+            color: $input-border;
+
+        }
+    }
+}
+
+.input-number-two {
+    position: relative;
+    display: inline-block;
+    height: $input-height;
+    font-size: 0;
+    line-height: 16px;
+
+    input {
+        width: 70px;
+        height: $input-height;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        text-align: center;
+        padding: 5px 15px 5px 5px;
+        margin: 0;
+        border: 1px solid $input-border;
+    }
+
+    .control {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 14px;
+        height: $input-height;
+        border: 1px solid $input-border;
+        background-color: $input-bg-disabled;
+
+        .minus,
+        .plus {
+            display: block;
+            left: 0;
+            width: 100%;
+            font-size: $font-size-base;
+            color: $gray-light;
+            line-height: ($input-height - 2px) / 2;
+            padding: 0;
+            border: 0;
+            @include border-radius(0);
+            background:none;
+
+            &:hover {
+                font-size: $font-size-normal;
+                color: $gray;
+            }
+
+            &.disabled {
+                cursor: not-allowed;
+                color: $input-border;
+
+                &:hover {
+                    font-size: $font-size-base;
+                    color: $input-border;
+                }
+            }
+
+        }
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: block;
+            width: 13px;
+            height: 1px;
+            background-color: $input-border;
+        }
+
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+
+        input {
+            color: lighten($gray-light, 6%);
+            background-color: $input-bg-disabled;
+        }
+
+        .minus,
+        .plus {
+            cursor: not-allowed;
+            color: $input-border;
+
+            &:hover {
+                font-size: $font-size-base;
+                color: $input-border;
+            }
+        }
+    }
+}
+
+
+
+
+
+

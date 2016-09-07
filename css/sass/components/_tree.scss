@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/*
+* TreeSelect树选择和Tree树形控件样式
+*
+* --------------------------------------------------
+*/
+
+/* TreeSelect树选择 */
+.select-options {
+
+    .tree-text {
+        cursor: pointer;
+
+        &.selected {
+            color: $color-primary;
+        }
+    }
+
+    .disabled {
+
+        .tree-text {
+            cursor: not-allowed;
+        }
+    }
+}
+
+/* Tree树形控件 */
+.tree-branch {
+    display: block;
+    font-size: 0;
+    color: $gray;
+    letter-spacing: 0;
+    padding: 5px 3px;
+    margin: 0;
+    
+    &.hide {
+        display: none;
+    }
+
+    .qIcon {
+        color: $gray-light;
+    }
+}
+
+.tree-item {
+    position: relative;
+    font-size: $font-size-base;
+    list-style: none;
+    white-space: nowrap;
+    padding: 0 0 0 18px;
+    margin: 6px 0;
+    outline: 0;
+
+    &.has-child {
+
+        >.tree-switcher {
+            display: inline-block;
+        }
+
+        > .tree-text > .file:before {
+            content: "\e645";
+        }
+
+    }
+
+    >.tree-switcher {
+        display: none;
+    }
+
+    &.checked-some {
+
+        > .tree-text {
+
+            .style-checkbox {
+                border-color: lighten($color-primary, 12%);
+                background-color: lighten($color-primary, 12%);
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 3px;
+                    width: 6px;
+                    height: 2px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background-color: #fff;
+                    margin-top: -1px;
+                }
+            }
+
+            .input-checkbox {
+
+                &:checked {
+
+                    + .style-checkbox {
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.disabled {
+        color: lighten($gray-light, 20%);
+
+        .qIcon, span {
+            color: lighten($gray-light, 20%);
+        }
+
+        .checkbox {
+            @extend .checkbox-disabled;
+        }
+
+        > .tree-text {
+
+            .style-checkbox {
+                border-color: $input-border;
+                background-color: #f4f4f4;
+
+                &:before {
+                    background-color: #ddd;
+                }
+            }
+
+        }
+    }
+}
+
+.tree-switcher {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    line-height: $line-height-base;
+    vertical-align: middle;
+    border: 0 none;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    @include transition(all .3s ease-out);
+
+    &:before {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-width: 4px;
+        border-style: solid;
+        border-color: $gray transparent transparent transparent;
+    }
+
+    &.close {
+        top: 4px;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+}
+
+
+.tree-text {
+    display: inline-block;
+    vertical-align: middle;
+
+    .checkbox {
+        margin: 0 5px;
+    }
+}
+
+
+
+

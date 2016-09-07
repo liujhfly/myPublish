@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范" />
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="breadcrumb">
+        <article class="markdown">
+            <h1>
+                面包屑
+            </h1>
+
+            <p>显示当前页面在系统层级结构中的位置，并能向上返回。</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="breadcrumb">
+                            <span>
+                                <span class="breadcrumb-link">首页</span>
+                                <span class="breadcrumb-separator">/</span>
+                            </span>
+                            <span>
+                                <a class="breadcrumb-link" href="#">交易</a>
+                                <span class="breadcrumb-separator">/</span>
+                            </span>
+                            <span>
+                                <span class="breadcrumb-link">所有订单</span>
+                                <span class="breadcrumb-separator">/</span>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">基本</a>
+                        </div>
+
+                        <p>最简单的用法，存在 <code>href</code> 表示可点。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-widthicon">
+                    <div class="code-box-demo">
+
+                        <div class="breadcrumb">
+                            <span>
+                                <a class="breadcrumb-link" href="#"><i class="qIcon shouye"></i>首页</a>
+                                <span class="breadcrumb-separator">&gt;</span>
+                            </span>
+                            <span>
+                                <a class="breadcrumb-link" href="#"><i class="qIcon gouwuche"></i>交易</a>
+                                <span class="breadcrumb-separator">&gt;</span>
+                            </span>
+                            <span>
+                                <span class="breadcrumb-link">所有订单</span>
+                                <span class="breadcrumb-separator">&gt;</span>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">带有图标、分隔符</a>
+                        </div>
+
+                        <p>图标放在文字前面,自定义分隔符。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

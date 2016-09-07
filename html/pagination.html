@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="pagination">
+        <article class="markdown">
+            <h1>
+                分页
+            </h1>
+
+            <p>说明</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="code-box expand" id="demo-basic">
+                <div class="code-box-demo">
+
+                    <ul class="pagination" id="paginationSimple">
+                        <li class="pagination-prev" title="上一页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li class="pagination-item current" title="第一页">
+                            <a href="javascript:;">1</a>
+                        </li>
+                        <li class="pagination-item" title="2">
+                            <a href="javascript:;">2</a>
+                        </li>
+                        <li class="pagination-item" title="3">
+                            <a href="javascript:;">3</a>
+                        </li>
+                        <li class="pagination-item" title="4">
+                            <a href="javascript:;">4</a>
+                        </li>
+                        <li class="pagination-item" title="最后一页">
+                            <a href="javascript:;">5</a>
+                        </li>
+                        <li class="pagination-next" title="下一页">
+                            <a href="javascript:;"></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="code-box-meta markdown">
+                    <div class="code-box-title">
+                        <a href="#demo-basic" class="qIcon biaoqian">基本</a>
+                    </div>
+
+                    <p>基础分页。</p>
+
+                </div>
+                <div class="highlight">
+                    <span class="xmp">具体代码内容有待整理</span>
+                </div>
+            </div>
+
+            <div class="code-box expand" id="demo-basic">
+                <div class="code-box-demo">
+
+                    <ul class="pagination">
+                        <span class="pagination-total-text">共 50 条</span>
+                        <li class="pagination-prev pagination-disabled" title="上一页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li class="pagination-item" title="第一页">
+                            <a href="javascript:;">1</a>
+                        </li>
+                        <li class="pagination-jump-prev" title="向前 5 页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li class="pagination-item current" title="6">
+                            <a href="javascript:;">6</a>
+                        </li>
+                        <li class="pagination-item" title="7">
+                            <a href="javascript:;">7</a>
+                        </li>
+                        <li class="pagination-item" title="8">
+                            <a href="javascript:;">8</a>
+                        </li>
+                        <li class="pagination-item" title="9">
+                            <a href="javascript:;">9</a>
+                        </li>
+                        <li class="pagination-item" title="10">
+                            <a href="javascript:;">10</a>
+                        </li>
+                        <li class="pagination-jump-next" title="向后 5 页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li class="pagination-item" title="最后一页: 50">
+                            <a href="javascript:;">50</a>
+                        </li>
+                        <li class="pagination-next" title="下一页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <div class="pagination-option">
+                            <div class="pagination-size-changer">
+                                <div class="form-select">
+                                    <div class="select-choice no-clear">
+                                        <span class="selected-option">10 条/页</span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                                    </div>
+                                    <div class="select-dropdown">
+                                        <ul class="select-options list-unstyled">
+                                            <li class="option">10 条/页</li>
+                                            <li class="option">20 条/页</li>
+                                            <li class="option">30 条/页</li>
+                                            <li class="option">40 条/页</li>
+                                            <li class="option">50 条/页</li>
+                                            <li class="option">60 条/页</li>
+                                            <li class="option">80 条/页</li>
+                                            <li class="option">100 条/页</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination-quick-jumper">
+                                <span>跳至</span>
+                                <input type="text" value="2">
+                                <span>页</span>
+                            </div>
+                        </div>
+                    </ul>
+
+                </div>
+                <div class="code-box-meta markdown">
+                    <div class="code-box-title">
+                        <a href="#demo-basic" class="qIcon biaoqian">更多</a>
+                    </div>
+
+                    <p>更多分页。</p>
+
+                </div>
+                <div class="highlight">
+                    <span class="xmp">具体代码内容有待整理</span>
+                </div>
+            </div>
+
+
+            <div class="code-box expand" id="demo-basic">
+                <div class="code-box-demo">
+
+                    <ul class="ant-pagination pagination-simple ">
+                        <li class="pagination-prev pagination-disabled">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <div title="2/5" class="pagination-simple-pager">
+                            <input type="text" class="pagination-slash">／</span>
+                            <span>5</span>
+                        </div>
+                        <li title="下一页" class="pagination-next">
+                            <a href="javascript:;"></a>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="code-box-meta markdown">
+                    <div class="code-box-title">
+                        <a href="#demo-basic" class="qIcon biaoqian">简洁分页</a>
+                    </div>
+
+                    <p>简单地翻页</p>
+
+                </div>
+                <div class="highlight">
+                    <span class="xmp">具体代码内容有待整理</span>
+                </div>
+            </div>
+
+            <div class="code-box expand" id="demo-basic">
+                <div class="code-box-demo">
+
+                    <ul class="pagination mini">
+                        <span class="pagination-total-text">共 50 条</span>
+                        <li class="pagination-prev pagination-disabled" title="上一页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li class="pagination-item" title="第一页">
+                            <a href="javascript:;">1</a>
+                        </li>
+                        <li class="pagination-jump-prev" title="向前 5 页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li class="pagination-item current" title="6">
+                            <a href="javascript:;">6</a>
+                        </li>
+                        <li class="pagination-item" title="7">
+                            <a href="javascript:;">7</a>
+                        </li>
+                        <li class="pagination-item" title="8">
+                            <a href="javascript:;">8</a>
+                        </li>
+                        <li class="pagination-item" title="9">
+                            <a href="javascript:;">9</a>
+                        </li>
+                        <li class="pagination-item" title="10">
+                            <a href="javascript:;">10</a>
+                        </li>
+                        <li class="pagination-jump-next" title="向后 5 页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li class="pagination-item" title="最后一页: 50">
+                            <a href="javascript:;">50</a>
+                        </li>
+                        <li class="pagination-next" title="下一页">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <div class="pagination-option">
+                            <div class="pagination-size-changer">
+                                <div class="form-select">
+                                    <div class="select-choice no-clear">
+                                        <span class="selected-option">10 条/页</span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                                    </div>
+                                    <div class="select-dropdown">
+                                        <ul class="select-options list-unstyled">
+                                            <li class="option">10 条/页</li>
+                                            <li class="option">20 条/页</li>
+                                            <li class="option">30 条/页</li>
+                                            <li class="option">40 条/页</li>
+                                            <li class="option">50 条/页</li>
+                                            <li class="option">60 条/页</li>
+                                            <li class="option">80 条/页</li>
+                                            <li class="option">100 条/页</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination-quick-jumper">
+                                <span>跳至</span>
+                                <input type="text" value="2">
+                                <span>页</span>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="code-box-meta markdown">
+                    <div class="code-box-title">
+                        <a href="#demo-basic" class="qIcon biaoqian">迷你分页</a>
+                    </div>
+
+                    <p>迷你版本。</p>
+
+                </div>
+                <div class="highlight">
+                    <span class="xmp">具体代码内容有待整理</span>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

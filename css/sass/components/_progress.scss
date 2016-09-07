@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/*
+* Progress进度条样式
+*
+* --------------------------------------------------
+*/
+
+/* Progress进度条 */
+.progress-line {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: $font-size-base;
+
+    &.status-active {
+
+        .progress-line-bg:after {
+            content: "";
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            @include border-radius(10px);
+            @include animation(progress-active 2s ease infinite);
+        }
+    }
+
+    &.status-success {
+
+        .progress-line-bg {
+            position: relative;
+            background: -webkit-linear-gradient(left, $color-success, lighten($color-success, 10%));
+            background: -o-linear-gradient(right, $color-success, lighten($color-success, 10%));
+            background: -moz-linear-gradient(right, $color-success, lighten($color-success, 10%));
+            background: linear-gradient(to right, $color-success, lighten($color-success, 10%));
+            background-color: $color-success;
+            @include border-radius(100px);
+            @include transition(all .3s linear 0s);
+        }
+    }
+
+    &.status-exception {
+
+        .progress-line-bg {
+            position: relative;
+            background: -webkit-linear-gradient(left, $color-error, lighten($color-error, 10%));
+            background: -o-linear-gradient(right, $color-error, lighten($color-error, 10%));
+            background: -moz-linear-gradient(right, $color-error, lighten($color-error, 10%));
+            background: linear-gradient(to right, $color-error, lighten($color-error, 10%));
+            background-color: $color-error;
+            @include border-radius(100px);
+            @include transition(all .3s linear 0s);
+        }
+    }
+
+    &.full {
+
+        .progress-line-outer {
+            padding-right: 0;
+        }
+
+        .progress-line-text {
+            display: none;
+        }
+    }
+}
+
+.progress-line-outer {
+    padding-right: 50px;
+    display: inline-block;
+    width: 100%;
+}
+
+.progress-line-inner {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #f3f3f3;
+    @include border-radius(100px);
+}
+
+.progress-line-bg {
+    position: relative;
+    background: -webkit-linear-gradient(left, $color-primary, lighten($color-primary, 10%));
+    background: -o-linear-gradient(right, $color-primary, lighten($color-primary, 10%));
+    background: -moz-linear-gradient(right, $color-primary, lighten($color-primary, 10%));
+    background: linear-gradient(to right, $color-primary, lighten($color-primary, 10%));
+    background-color: $color-primary;
+    @include border-radius(100px);
+}
+
+.progress-line-text {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -0.5em;
+    display: inline-block;
+    width: 35px;
+    font-family: tahoma;
+    font-size: 1em;
+    line-height: 1;
+    text-align: left;
+    vertical-align: middle;
+
+    .qIcon {
+        font-size: $font-size-normal;
+        color: $gray-light;
+    }
+}
+
+@keyframes progress-active {
+    0% {
+        opacity: .3;
+        width: 0
+    }
+    100% {
+        opacity: 0;
+        width: 100%
+    }
+}

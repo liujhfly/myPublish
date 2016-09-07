@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="calendar">
+        <article class="markdown">
+            <h1>
+                日历
+            </h1>
+
+            <p>说明</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="code-box expand" id="demo-basic">
+                <div class="code-box-demo">
+
+                    <div class="fullcalendar">
+                        <div class="fullcalendar-header">
+                            <div class="radio-group">
+                                <label class="radio-tabs">
+                                    <input class="input-radio" type="radio" name="view1" checked>
+                                    <span class="style-radio-tabs">月</span>
+                                </label>
+                                <label class="radio-tabs">
+                                    <input class="input-radio" type="radio" name="view1">
+                                    <span class="style-radio-tabs">年</span>
+                                </label>
+                            </div>
+
+                            <div class="fullcalendar-year-select">
+                                <div class="form-select input-short">
+                                    <div class="select-choice">
+                                        <span class="selected-option no-clear">2016年</span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                                    </div>
+                                    <div class="select-dropdown">
+                                        <ul class="select-options list-unstyled">
+                                            <li class="option">2012年</li>
+                                            <li class="option">2013年</li>
+                                            <li class="option">2014年</li>
+                                            <li class="option">2015年</li>
+                                            <li class="option selected">2016年</li>
+                                            <li class="option">2017年</li>
+                                            <li class="option">2018年</li>
+                                            <li class="option">2019年</li>
+                                            <li class="option">2020年</li>
+                                            <li class="option">2021年</li>
+                                            <li class="option">2022年</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fullcalendar-month-select">
+                                <div class="form-select input-short">
+                                    <div class="select-choice">
+                                        <span class="selected-option no-clear">四月</span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                                    </div>
+                                    <div class="select-dropdown">
+                                        <ul class="select-options list-unstyled">
+                                            <li class="option">一月</li>
+                                            <li class="option">二月</li>
+                                            <li class="option">三月</li>
+                                            <li class="option selected">四月</li>
+                                            <li class="option">五月</li>
+                                            <li class="option">六月</li>
+                                            <li class="option">七月</li>
+                                            <li class="option">八月</li>
+                                            <li class="option">九月</li>
+                                            <li class="option">十月</li>
+                                            <li class="option">十一月</li>
+                                            <li class="option">十二月</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="fullcalendar-body">
+                            <table class="fullcalendar-table">
+                                <thead>
+                                <tr>
+                                    <th class="fullcalendar-column-header">
+                                        <span class="inner">星期一</span>
+                                    </th>
+                                    <th class="fullcalendar-column-header">
+                                        <span class="inner">星期二</span>
+                                    </th>
+                                    <th class="fullcalendar-column-header">
+                                        <span class="inner">星期三</span>
+                                    </th>
+                                    <th class="fullcalendar-column-header">
+                                        <span class="inner">星期四</span>
+                                    </th>
+                                    <th class="fullcalendar-column-header">
+                                        <span class="inner">星期五</span>
+                                    </th>
+                                    <th class="fullcalendar-column-header">
+                                        <span class="inner">星期六</span>
+                                    </th>
+                                    <th class="fullcalendar-column-header">
+                                        <span class="inner">星期日</span>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody class="fullcalendar-tbody">
+                                <tr>
+                                    <td class="fullcalendar-cell fullcalendar-last-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                28
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-last-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                29
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-last-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                30
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-last-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                31
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                01
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                02
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                03
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <ul class="events">
+                                                    <li>
+                                                        <span class="event-warn">●</span>
+                                                        <span>这里是警告事项</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="event-normal">●</span>
+                                                        <span>这里是普通事项.</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="event-error">●</span>
+                                                        <span>这里是错误事项.</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="event-warn">●</span>
+                                                        <span>这里是警告事项</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                04
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                05
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                06
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                07
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                08
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                09
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                10
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                11
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <h5>学习</h5>
+                                                <span>reactjs的学习会</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-today">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                12
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                13
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                14
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                15
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                16
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                17
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                18
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                19
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                20
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                21
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                22
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                23
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                24
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                25
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                26
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                27
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                28
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                29
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                30
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-next-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                01
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fullcalendar-cell fullcalendar-next-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                02
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-next-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                03
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-next-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                04
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-next-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                05
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-next-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                06
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-next-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                07
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>自定义数据</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-cell fullcalendar-next-month-cell">
+                                        <div class="fullcalendar-date">
+                                            <div class="fullcalendar-value">
+                                                08
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="fullcalendar-month-table hide">
+                                <tbody class="fullcalendar-month-tbody">
+                                <tr>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                一月
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <h4>开会</h4>
+                                                <span>8点半开会,公司网站优化相关</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                二月
+                                            </div>
+                                            <div class="fullcalendar-content"></div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                三月
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>电商云demo</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fullcalendar-month-cell fullcalendar-month-selected">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                四月
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <h4>开会</h4>
+                                                <span>8点半开会,公司网站优化相关</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                五月
+                                            </div>
+                                            <div class="fullcalendar-content"></div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                六月
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>电商云demo</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                七月
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <h4>开会</h4>
+                                                <span>8点半开会,公司网站优化相关</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                八月
+                                            </div>
+                                            <div class="fullcalendar-content"></div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                九月
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>电商云demo</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                十月
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <h4>开会</h4>
+                                                <span>8点半开会,公司网站优化相关</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                十一月
+                                            </div>
+                                            <div class="fullcalendar-content"></div>
+                                        </div>
+                                    </td>
+                                    <td class="fullcalendar-month-cell">
+                                        <div class="fullcalendar-month">
+                                            <div class="fullcalendar-value">
+                                                十二月
+                                            </div>
+                                            <div class="fullcalendar-content">
+                                                <span>电商云demo</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="code-box-meta markdown">
+                    <div class="code-box-title">
+                        <a href="#demo-basic" class="qIcon biaoqian">基本</a>
+                    </div>
+
+                    <p>基本日历有月视图和年视图,可以进行切换.</p>
+
+                </div>
+                <div class="highlight">
+                    <span class="xmp">具体代码内容有待整理</span>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

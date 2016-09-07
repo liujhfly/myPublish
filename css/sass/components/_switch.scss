@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/*
+* Switch开关样式
+*
+* --------------------------------------------------
+*/
+
+/* Switch开关 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: $switch-width;
+    height: $switch-height;
+    line-height: $switch-height;
+    vertical-align: middle;
+    @include user-select(none);
+    //@include transition(all .3s cubic-bezier(.78, .14, .15, .86));
+
+    input {
+        display: none;
+
+        &:checked ~ .switch-inner {
+            background-color: lighten($color-primary, 6%);
+
+            .handle {
+                left: ($switch-width / 2) + 1px;
+            }
+
+            .off {
+                display: none;
+            }
+
+            .on {
+                display: inline-block;
+            }
+        }
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+
+        .switch-inner {
+            cursor: not-allowed;
+
+            .handle {
+                background-color: darken($input-bg, 3%);
+            }
+        }
+
+        input {
+            display: none;
+            cursor: not-allowed;
+
+            &:checked ~ .switch-inner {
+                background-color: lighten($color-primary, 16%);
+
+                .handle {
+                    background-color: darken($input-bg, 3%);
+                }
+            }
+        }
+    }
+
+    &.switch-lg {
+        width: $switch-lg-width;
+        height: $switch-lg-height;
+        line-height: $switch-lg-height;
+
+        .switch-inner {
+            width: $switch-lg-width;
+            height: $switch-lg-height;
+
+            .handle {
+                width: $switch-lg-handle;
+                height: $switch-lg-handle;
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked ~ .switch-inner {
+                background-color: lighten($color-primary, 6%);
+
+                .handle {
+                    left: ($switch-lg-width / 2) + 1px;
+                }
+            }
+        }
+
+    }
+
+    &.switch-sm {
+        width: $switch-sm-width;
+        height: $switch-sm-height;
+        line-height: $switch-sm-height;
+
+        .switch-inner {
+            width: $switch-sm-width;
+            height: $switch-sm-height;
+
+            .handle {
+                width: $switch-sm-handle;
+                height: $switch-sm-handle;
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked ~ .switch-inner {
+                background-color: lighten($color-primary, 6%);
+
+                .handle {
+                    left: ($switch-sm-width / 2) + 1px;
+                }
+            }
+        }
+
+    }
+}
+
+.switch-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: $switch-width;
+    height: $switch-height;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    @include border-radius(20px);
+    background-color: darken($input-bg, 10%);
+    cursor: pointer;
+    @include transition(all .3s cubic-bezier(.78, .14, .15, .86));
+
+    .handle {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        display: inline-block;
+        width: $switch-handle;
+        height: $switch-handle;
+        background-color: #fff;
+        @include border-radius(50%);
+        @include box-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+        @include transition(left .3s cubic-bezier(.78, .14, .15, .86));
+    }
+
+    .on,
+    .off {
+        position: absolute;
+        top: 0;
+    }
+
+    .on {
+        display: none;
+        left: 5px;
+    }
+
+    .off {
+        display: inline-block;
+        right: 5px;
+    }
+}
+
+.switch-small {
+    height: 14px;
+    line-height: 12px;
+    width: 28px;
+    &:after {
+        width: 12px;
+        height: 12px;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+

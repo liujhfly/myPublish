@@ -1,0 +1,118 @@
+@charset "UTF-8";
+$message-notice-border:        #d9d9d9 !default;
+$success-color:                #87d068 !default;
+$info-color:                   #2db7f5 !default;
+$warn-color:                   #fa0 !default;
+$error-color:                  #f50 !default;
+/*
+* Message全局提示样式
+*
+* --------------------------------------------------
+*/
+
+/* Message全局提示 */
+.message {
+  display: none;
+  position: fixed;
+  z-index: $zindex-popover;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -18px;
+  .message-notice {
+    position: absolute;
+    left: 50%;
+    width: auto;
+    vertical-align: middle;
+    .message-notice-content {
+      display: block;
+      position: relative;
+      right: 50%;
+      padding: 8px 16px;
+      @include border-radius($border-radius-base);
+      border: 1px solid $message-notice-border;
+      @include box-shadow(0 0 4px rgba(0,0,0,0.17));
+      background: #fff;
+      .message-custom-content {
+        .qIcon {
+          position: relative;
+          top: 1px;
+          margin-right: 8px;
+          font-size: $font-size-normal;
+          line-height: 1;
+          &:before {
+            width: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.message-success {
+  .qIcon {
+    color: $success-color ;
+  }
+}
+
+.message-info {
+  .qIcon {
+    color: $info-color ;
+  }
+}
+
+.message-loading {
+  .qIcon {
+    color: $info-color ;
+    &:before {
+      -webkit-animation: loadingCircle 1s infinite linear;
+      animation: loadingCircle 1s infinite linear;
+    }
+  }
+}
+
+.message-warn {
+  .qIcon {
+    color: $warn-color ;
+  }
+}
+
+.message-error {
+  .qIcon {
+    color: $error-color ;
+  }
+}
+//加载中动画
+@-webkit-keyframes loadingCircle{
+  0% {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  100% {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg)
+  }
+}
+
+@keyframes loadingCircle
+{
+  0% {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  100% {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+
+

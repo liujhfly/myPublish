@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*
+* Dropdown下拉菜单样式
+*
+* --------------------------------------------------
+*/
+
+/* Dropdown下拉菜单 */
+.dropdown-demo {
+  position: relative;
+  .dropdown {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    z-index: $zindex-dropdown;
+    display: none;
+    .dropdown-menu {
+      position: relative;
+      width: 100%;
+      text-align: left;
+      background-color: #fff ;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding-box;
+      background-clip: padding-box;
+      @include border-radius($border-radius-base);
+      @include box-shadow(0 0 4px rgba(0,0,0,0.17));
+      border: 1px solid $input-border;
+      .dropdown-menu-item {
+        cursor: pointer;
+        white-space: nowrap;
+        padding: 7px 15px;
+        @include transition(background .3s ease);
+        >a {
+          display: block;
+          padding: 7px 15px;
+          margin: -7px -15px;
+          color: $gray;
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+        &:first-child {
+          @include border-top-radius($border-radius-base);
+          @include border-bottom-radius(0);
+        }
+        &:last-child {
+          @include border-top-radius(0);
+          @include border-bottom-radius($border-radius-base);
+        }
+        &:hover {
+          background: lighten($color-primary, 40%);
+        }
+      }
+      .dropdown-menu-item-divider {
+        height: 1px;
+        line-height: 0;
+        overflow: hidden;
+        background-color: $gray-lighter;
+      }
+      .dropdown-menu-item-disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        color: $gray-light;
+      }
+      .dropdown-menu-submenu {
+        position: relative;
+        .dropdown-menu-submenu-title {
+          cursor: pointer;
+          padding: 7px 15px;
+          margin: 0;
+          color: $gray;
+          .arrowRight {
+            float: right;
+          }
+        }
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          margin-left: 4px;
+          width: auto;
+          min-width: 100%;
+        }
+        &:hover {
+          background: lighten($color-primary, 40%);
+          .dropdown-menu-submenu-title {
+            color: $link-hover-color;
+          }
+          .dropdown-menu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+.dropdown-demo-button {
+  .dropdown {
+    top: 33px;
+  }
+}
+
+
+
+

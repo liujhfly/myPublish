@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="message">
+        <article class="markdown">
+            <h1>
+                全局提示
+            </h1>
+
+            <p>全局展示操作反馈信息。</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-info">
+                    <div class="code-box-demo">
+
+                        <div class="message-demo-info">
+                            <button type="button" class="btn" id="btn-info">显示普通提醒</button>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">普通提示</a>
+                        </div>
+
+                        <p>信息提醒反馈。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-duration">
+                    <div class="code-box-demo">
+
+                        <div class="message-demo-duration">
+                            <button type="button" class="btn btn-gray" id="btn-duration">自定义时长提示</button>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">修改延时</a>
+                        </div>
+
+                        <p>自定义时长 <code>10s</code>，默认时长为 <code>1.5s</code>。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="code-box expand" id="demo-other">
+                    <div class="code-box-demo">
+
+                        <div class="message-demo-other">
+                            <button type="button" class="btn btn-gray" id="btn-success">显示成功提示</button>
+                            <button type="button" class="btn btn-gray" id="btn-error">显示报错提示</button>
+                            <button type="button" class="btn btn-gray" id="btn-warn">显示警告提示</button>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">其它提示类型</a>
+                        </div>
+
+                        <p>包括成功、失败、警告。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-loading">
+                    <div class="code-box-demo">
+
+                        <div class="message-demo-loading">
+                            <button type="button" class="btn btn-gray" id="btn-loading">显示加载中...</button>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">加载中</a>
+                        </div>
+
+                        <p>进行全局 loading，异步自行移除。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+    <div class="message">
+        <div class="message-notice">
+            <div class="message-notice-content">
+                <div class="message-custom-content">
+                    <i class="qIcon"></i><span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

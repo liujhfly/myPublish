@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="button">
+
+        <article class="markdown">
+            <h1>
+                Button 按钮
+            </h1>
+
+            <p>按钮用于开始一个即时操作。</p>
+
+            <h2 id="何时使用">何时使用<a href="#何时使用" class="anchor">#</a></h2>
+
+            <p>标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。</p>
+        </article>
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn">默认按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-gray">gray按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-light">light按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-link">link按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn-clear">clear按钮</button>
+                            </li>
+                        </ul>
+
+                        <ul class="list-inline">
+                            <li>
+                                <button disabled class="btn">默认按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-gray disabled">gray按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-light disabled">light按钮</button>
+                            </li>
+                            <li>
+                                <a disabled class="btn btn-link">link按钮</a>
+                            </li>
+                            <li>
+                                <button class="btn-clear disabled">clear按钮</button>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">按钮类型</a>
+                        </div>
+                        <p>按钮有四种类型：默认按钮、gray按钮、light按钮、link按钮、clear按钮。</p>
+
+                        <p>通过设置 <code>class</code> 为
+                            <code>btn</code>
+                            <code>btn-gray</code>
+                            <code>btn-light</code>
+                            <code>btn-link</code>
+                            <code>btn-clear</code>
+                            可分别创建按钮，若不设置属性
+                            <code>class</code>
+                            值则为默认按钮。</p>
+                        <p>当按钮处于不可用状态时,只需要将属性
+                            <code>class</code>值中增加
+                            <code>disabled</code>或增加属性
+                            <code>disabled</code>
+                        </p>
+                    </div>
+                    <div class="highlight">
+                        <xmp>
+                            <button class="btn">默认按钮</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-gray">gray按钮</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-light">light按钮</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-link">link按钮</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn-clear">clear按钮</button>
+                        </xmp>
+                    </div>
+                </div>
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-icon-primary">
+                                    <i class="qIcon email"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-icon-gray">
+                                    <i class="qIcon phone"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-icon-clear">
+                                    <i class="qIcon banshou"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-icon-primary btn-icon-lg">
+                                    <i class="qIcon yundinghuo"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-icon-primary">
+                                    <i class="qIcon yundinghuo"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-icon-primary btn-icon-sm">
+                                    <i class="qIcon yundinghuo"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">图标按钮</a>
+                        </div>
+                        <p>图标按钮有三种类型：默认图标按钮、gray图标按钮、clear图标按钮。</p>
+
+                        <p>通过设置 <code>class</code> 为
+                            <code>btn btn-icon-primary</code>
+                            <code>btn btn-icon-gray</code>
+                            <code>btn btn-icon-clear</code>
+                            可分别创建不同类型的图标按钮。</p>
+                        <p>通过设置 <code>class</code> 为
+                            <code>btn-icon-lg</code>
+                            <code>btn-icon-sm</code>
+                            分别把按钮设为大、小尺寸。若不设置，则尺寸为默认。</p>
+                    </div>
+                    <div class="highlight">
+                        <xmp>
+                            <button class="btn btn-icon-primary">
+                                <i class="qIcon youjian"></i>
+                            </button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-icon-gray">
+                                <i class="qIcon guanbi"></i>
+                            </button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-icon-clear">
+                                <i class="qIcon banshou"></i>
+                            </button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-icon-primary btn-icon-lg">
+                                <i class="qIcon shouji"></i>
+                            </button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-icon-primary">
+                                <i class="qIcon shouji"></i>
+                            </button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-icon-primary btn-icon-sm">
+                                <i class="qIcon shouji"></i>
+                            </button>
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="code-box expand" id="demo-size">
+                    <div class="code-box-demo">
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-lg">大按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn">默认尺寸</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-sm">小按钮</button>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-size" class="qIcon biaoqian">按钮尺寸</a>
+                        </div>
+                        <p>按钮有大、默认、小三种尺寸。</p>
+
+                        <p>通过设置 <code>class</code> 为
+                            <code>btn-lg</code>
+                            <code>btn-sm</code>
+                            分别把按钮设为大、小尺寸。若不设置，则尺寸为默认。</p>
+                    </div>
+                    <div class="highlight">
+                        <xmp>
+                            <button class="btn btn-lg">大按钮</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn">默认尺寸</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn btn-sm">小按钮</button>
+                        </xmp>
+                    </div>
+                </div>
+                <div class="code-box expand" id="demo-size">
+                    <div class="code-box-demo">
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn"><i class="qIcon zhuce"></i>默认按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn">默认<i class="qIcon jiahao"></i>按钮</button>
+                            </li>
+                            <li>
+                                <button class="btn">默认按钮<i class="qIcon xiazai"></i></button>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-size" class="qIcon biaoqian">含图标的按钮</a>
+                        </div>
+                        <p>含图标的按钮可直接在按钮广本中增加图标标签即可</p>
+                    </div>
+                    <div class="highlight">
+                        <xmp>
+                            <button class="btn"><i class="qIcon zhuce"></i>默认按钮</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn">默认<i class="qIcon jiahao"></i>按钮</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn">默认按钮<i class="qIcon xiazai"></i></button>
+                        </xmp>
+                    </div>
+                </div>
+                <div class="code-box expand" id="demo-size">
+                    <div class="code-box-demo">
+                        <p>基本组合</p>
+                        <div>
+                            <div class="btn-group">
+                                <button class="btn"><i class="qIcon liebiao"></i></button>
+                                <button class="btn">默认按钮</button>
+                                <button class="btn"><i class="qIcon zhuce"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="pusht">
+                            <div class="btn-group">
+                                <button class="btn btn-clear">&lt;&lt;</button>
+                                <button class="btn btn-clear">1</button>
+                                <button class="btn btn-clear">2</button>
+                                <button class="btn btn-clear">3</button>
+                                <button class="btn btn-clear">&gt;&gt;</button>
+                            </div>
+                        </div>
+                        <p class="pusht">基本组合</p>
+                        <div class="pusht">
+                            <div class="btn-group">
+                                <button class="btn">&lt;&nbsp;前进</button>
+                                <button class="btn">后退&nbsp;&gt;</button>
+                            </div>
+                        </div>
+
+                        <div class="pusht">
+                            <div class="btn-group">
+                                <button class="btn btn-gray"><i class="qIcon xinzengshangpin"></i></button>
+                                <button class="btn btn-gray"><i class="qIcon renzhengyonghu"></i></button>
+                                <button class="btn btn-gray"><i class="qIcon xiaxiang"></i></button>
+                            </div>
+                        </div>
+                        <p class="pusht">尺寸</p>
+                        <div class="pusht">
+                            <div class="btn-group">
+                                <button class="btn btn-gray btn-lg">大按钮</button>
+                                <button class="btn btn-gray btn-lg">大按钮</button>
+                                <button class="btn btn-gray btn-lg">大按钮</button>
+                            </div>
+                        </div>
+
+                        <div class="pusht">
+                            <div class="btn-group">
+                                <button class="btn">默认按钮</button>
+                                <button class="btn">默认按钮</button>
+                                <button class="btn">默认按钮</button>
+                            </div>
+                        </div>
+
+                        <div class="pusht">
+                            <div class="btn-group">
+                                <button class="btn btn-clear btn-sm">小按钮</button>
+                                <button class="btn btn-clear btn-sm">小按钮</button>
+                                <button class="btn btn-clear btn-sm">小按钮</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-size" class="qIcon biaoqian">按钮组合</a>
+                        </div>
+                        <p>可以将多个<code>button</code> 放入到一个类名为
+                            <code>btn-group</code>的容器中。
+                        </p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;div class="btn-group"&gt;</span>
+                        <xmp>
+                            <button class="btn"><i class="qIcon liebiao"></i></button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn">默认按钮</button>
+                        </xmp>
+                        <xmp>
+                            <button class="btn"><i class="qIcon zhuce"></i></button>
+                        </xmp>
+                        <span class="xmp">&lt;/div&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#demo-basic">
+                    <span>按钮类型</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#demo-size">
+                    <span>按钮尺寸</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav"><span class="prev-page"></span><a class="next-page"
+                                                                     href="http://ant.design/docs/react/getting-started">
+            快速上手
+            <span class="chinese"></span>
+        </a></div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

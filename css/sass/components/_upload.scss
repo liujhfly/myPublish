@@ -1,0 +1,161 @@
+@charset "UTF-8";
+//半透明遮罩
+$translucent-shader: rgba(128,128,128,0.8) !default;
+$translucent-shader-color: #fff !default;
+
+/*
+* Upload上传样式
+*
+* --------------------------------------------------
+*/
+
+/* Upload上传 */
+.upload-basic {
+  display: inline-block;
+}
+
+.upload-inline {
+  float: left;
+}
+
+.form-upload {
+  display: block;
+  width: 100%;
+  outline: none;
+  input[type="file"] {
+    display: none;
+  }
+}
+
+.upload-list-text {
+  margin-top: 8px;
+  .upload-list-item {
+    .upload-list-item-info {
+      padding: 0 4px;
+      height: 22px;
+      line-height: 22px;
+      @include transition(background-color .3s ease);
+      .file {
+        margin-right: 4px;
+        color: $gray-light;
+      }
+      .close {
+        display: none;
+      }
+    }
+    &:hover {
+      background: lighten($color-primary, 40%);
+      .upload-list-item-info {
+        .close {
+          cursor: pointer;
+          float: right;
+          display: inline-block;
+          margin-left: 8px;
+          line-height: 22px;
+          color: $gray-light;
+        }
+      }
+    }
+  }
+}
+
+.upload-list-inline {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 10px;
+  height: 28px;
+  .upload-list-item {
+    .upload-list-item-info {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      height: 28px;
+    }
+  }
+}
+
+//上传图片卡片样式
+.upload-list-card {
+  display: inline-block;
+  .upload-list-item {
+    float: left;
+    margin: 0 8px 0 0;
+    padding: 8px;
+    width: 96px;
+    height: 96px;
+    border: 1px solid $btn-light-border;
+    .upload-list-item-info {
+      @include img-responsive;
+      position: relative;
+      height: 100%;
+      .upload-list-item-thumbnail {
+        @include img-responsive;
+        height: 100%;
+        img {
+          @include img-responsive;
+          height: 100%;
+        }
+      }
+      .upload-list-item-operation {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 78px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        color: $translucent-shader-color;
+        background-color: $translucent-shader;
+        @include transition(all .3s ease);
+      }
+    }
+  }
+  &:hover {
+    .upload-list-item-info {
+      .upload-list-item-operation {
+        display: block;
+      }
+    }
+  }
+}
+
+.upload-select {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+  height: 96px;
+  .btn-gray {
+    padding: 24px 0;
+    width: 96px;
+    height: 96px;
+    border-style: dashed;
+    @include transition(border-color .3s ease);
+  }
+}
+
+.upload-example {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px;
+  width: 96px;
+  height: 96px;
+  border: 1px solid $btn-light-border;
+  span {
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    width: 78px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: $translucent-shader-color;
+    background-color: $translucent-shader;
+  }
+}
+
+
+
+

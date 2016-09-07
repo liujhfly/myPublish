@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范" />
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="carousel">
+        <article class="markdown">
+            <h1>走马灯</h1>
+            <p>旋转木马,一组轮播的区域.</p>
+            <h2>何时使用<a href="#" class="anchor">#</a> </h2>
+            <ul>
+                <li>当有一组平级的内容。</li>
+                <li>当内容空间不足时，可以用走马灯的形式进行收纳，进行轮播展现。</li>
+                <li>常用于一组图片或卡片轮播。</li>
+            </ul>
+            <h2 class="component-demos">代码演示</h2>
+            <div class="code-boxes">
+                <div class="col-12">
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <div class="carousel"  id="carousel_1">
+                                <div class="carousel-box">
+                                    <div class="carousel-body">
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">1</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">2</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">3</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">4</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">5</h1>
+                                        </div>
+                                    </div>
+                                    <ul class="carousel-points">
+                                        <li class="cur"></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#demo-basic" class="qIcon biaoqian">不自动播放,fade效果</a>
+                            </div>
+                            <p><code>{autoplay:false,effect:"fade"}</code></p>
+                        </div>
+                        <div class="highlight">
+                            var Carousel1 =new Carousel(_carousel_1,{autoplay:false,effect:"fade"});
+                        </div>
+                    </div>
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <div class="carousel" id="carousel_2">
+                                <div class="carousel-box">
+                                    <div class="carousel-body">
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">1</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">2</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">3</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">4</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">5</h1>
+                                        </div>
+                                    </div>
+                                    <ul class="carousel-points">
+                                        <li class="cur"></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#demo-basic" class="qIcon biaoqian">不自动播放,slide效果</a>
+                            </div>
+                            <p><code>{autoplay:false,effect:"slide"}</code></p>
+                        </div>
+                        <div class="highlight">
+                            var Carousel2 =new Carousel(_carousel_2,{autoplay:false,effect:"slide"});
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <div class="carousel" id="carousel_3">
+                                <div class="carousel-box">
+                                    <div class="carousel-body">
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">1</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">2</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">3</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">4</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">5</h1>
+                                        </div>
+                                    </div>
+                                    <ul class="carousel-points">
+                                        <li class="cur"></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#demo-basic" class="qIcon biaoqian">自动播放,fade效果</a>
+                            </div>
+                            <p><code>{autoplay:true,effect:"fade"}</code></p>
+                        </div>
+                        <div class="highlight">
+                            var Carousel3 =new Carousel(_carousel_3,{autoplay:true,effect:"fade"});
+                        </div>
+                    </div>
+                    <div class="code-box expand">
+                        <div class="code-box-demo">
+                            <div class="carousel" id="carousel_4">
+                                <div class="carousel-box">
+                                    <div class="carousel-body">
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">1</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">2</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">3</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">4</h1>
+                                        </div>
+                                        <div class="carousel-body-item">
+                                            <h1 class="demo-list">5</h1>
+                                        </div>
+                                    </div>
+                                    <ul class="carousel-points">
+                                        <li class="cur"></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-box-meta markdown">
+                            <div class="code-box-title">
+                                <a href="#demo-basic" class="qIcon biaoqian">自动播放,slide效果</a>
+                            </div>
+                            <p><code>{autoplay:true,effect:"slide"}</code></p>
+                        </div>
+                        <div class="highlight">
+                            var Carousel4 =new Carousel(_carousel_4,{autoplay:true,effect:"slide"});
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+F
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+<script>
+    var _carousel_1 = document.getElementById('carousel_1');
+    var _carousel_2 = document.getElementById('carousel_2');
+    var _carousel_3 = document.getElementById('carousel_3');
+    var _carousel_4 = document.getElementById('carousel_4');
+    var Carousel1 =new Carousel(_carousel_1,{autoplay:false,effect:"fade"});
+    var Carousel2 =new Carousel(_carousel_2,{autoplay:false,effect:"slide"});
+    var Carousel3 =new Carousel(_carousel_3,{autoplay:true,effect:"fade"});
+    var Carousel4 =new Carousel(_carousel_4,{autoplay:true,effect:"slide"});
+</script>
+</html>

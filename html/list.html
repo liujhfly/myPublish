@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="list">
+        <article class="markdown">
+            <h1>
+                Lists 列表
+            </h1>
+
+            <p>说明</p>
+
+        </article>
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-unorder">
+                    <div class="code-box-demo">
+                        <ul class="list-unorder">
+                            <li>第一步:无序列表</li>
+                            <li>第二步:无序列表</li>
+                            <li>第三步:无序列表</li>
+                            <li>第四步:无序列表</li>
+                            <li>第五步:无序列表</li>
+                        </ul>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">无序列表</a>
+                        </div>
+                        <p>排列顺序无关紧要的一列元素。</p>
+
+                        <p>通过设置<code>class</code> 为
+                            <code>list-unorder</code>值进行设置。</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;ul class="list-unorder"&gt;</span>
+                        <xmp>
+                            <li>第一步:无序列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>第二步:无序列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>第三步:无序列表</li>
+                        </xmp>
+                        <span class="xmp">&lt;/ul&gt;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="code-box expand" id="demo-order">
+                    <div class="code-box-demo">
+                        <ul class="list-order">
+                            <li>第一步:有序列表</li>
+                            <li>第二步:有序列表</li>
+                            <li>第三步:有序列表</li>
+                            <li>第四步:有序列表</li>
+                            <li>第五步:有序列表</li>
+                        </ul>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">有序列表</a>
+                        </div>
+                        <p>顺序至关重要的一组元素。</p>
+
+                        <p>通过设置<code>class</code> 为
+                            <code>list-order</code>值进行设置。</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;ul class="list-order"&gt;</span>
+                        <xmp>
+                            <li>第一步:有序列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>第二步:有序列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>第三步:有序列表</li>
+                        </xmp>
+                        <span class="xmp">&lt;/ul&gt;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="code-box expand" id="demo-unstyled">
+                    <div class="code-box-demo">
+                        <ul class="list-unstyled">
+                            <li>第一步:无样式列表</li>
+                            <li>第二步:无样式列表</li>
+                            <li>第三步:无样式列表</li>
+                            <li>第四步:无样式列表</li>
+                            <li>第五步:无样式列表</li>
+                        </ul>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">无样式序列表</a>
+                        </div>
+                        <p>移除了默认的 list-style 样式和左侧外边距的一组元素（只针对直接子元素）。
+                            这是针对直接子元素的，也就是说，你需要对所有嵌套的列表都添加这个类才能具有同样的样式。</p>
+
+                        <p>通过设置<code>class</code> 为
+                            <code>list-unstyled</code>值进行设置。</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;ul class="list-unstyled"&gt;</span>
+                        <xmp>
+                            <li>第一步:无样式列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>第二步:无样式序列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>第三步:无样式列表</li>
+                        </xmp>
+                        <span class="xmp">&lt;/ul&gt;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-inline">
+                    <div class="code-box-demo">
+                        <ul class="list-inline">
+                            <li>无序列表</li>
+                            <li>有序列表</li>
+                            <li>无样式列表</li>
+                            <li>内联列表</li>
+                        </ul>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">内联列表</a>
+                        </div>
+                        <p>顺序至关重要的一组元素。</p>
+
+                        <p>通过设置<code>class</code> 为
+                            <code>list-inline</code>值进行设置。</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">&lt;ul class="list-inline"&gt;</span>
+                        <xmp>
+                            <li>无序列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>有序列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>无样式列表</li>
+                        </xmp>
+                        <xmp>
+                            <li>内联列表</li>
+                        </xmp>
+                        <span class="xmp">&lt;/ul&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

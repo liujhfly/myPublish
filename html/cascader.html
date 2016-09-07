@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="cascader">
+
+        <article class="markdown">
+            <h1>
+                级联选择
+            </h1>
+
+            <p>说明</p>
+
+        </article>
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-cascader">
+                            <div class="cascader-choice">
+                                <span class="selected-option has-placeholder">
+                                    <span class="placeholder">默认选项</span>
+                                </span>
+                                <span class="selected-clear">
+                                    <i class="icon-cross-line"></i>
+                                </span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+
+                            <div class="cascader-dropdown">
+                                <ul class="cascader-menu">
+                                    <li class="option">一级选择1</li>
+                                    <li class="option">一级选择2</li>
+                                    <li class="option">一级选择3</li>
+                                    <li class="option">一级选择4</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="form-cascader disabled">
+                            <div class="cascader-choice">
+                                <span class="selected-option has-placeholder">
+                                    <span class="placeholder">默认选项</span>
+                                </span>
+                                <span class="selected-clear">
+                                    <i class="icon-cross-line"></i>
+                                </span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+
+                            <div class="cascader-dropdown">
+                                <ul class="cascader-menu">
+                                    <li class="option">一级选择1</li>
+                                    <li class="option">一级选择2</li>
+                                    <li class="option">一级选择3</li>
+                                    <li class="option">一级选择4</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">自定义选择框</a>
+                        </div>
+
+                        <p>以原生的选择器为主,在父节点使用<code>class</code>值为<code>.select-wrapper</code>,
+                            实现简单样式修正。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="form-cascader">
+                            <div class="cascader-choice">
+                                <span class="selected-option">
+                                    江苏/南京
+                                </span>
+                                <span class="selected-clear">
+                                    <i class="icon-cross-line"></i>
+                                </span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+
+                            <div class="cascader-dropdown">
+                                <ul class="cascader-menu">
+                                    <li class="option">一级选择1</li>
+                                    <li class="option">一级选择2</li>
+                                    <li class="option">一级选择3</li>
+                                    <li class="option">一级选择4</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="form-cascader">
+                            <div class="cascader-choice">
+                                <span class="selected-option has-placeholder">
+                                    <span class="placeholder">默认选项</span>
+                                </span>
+                                <span class="selected-clear">
+                                    <i class="icon-cross-line"></i>
+                                </span>
+                                <span class="select-arrow">
+                                    <i class="icon-arrow-line"></i>
+                                </span>
+                            </div>
+
+                            <div class="cascader-dropdown">
+                                <ul class="cascader-menu">
+                                    <li class="option">一级选择1</li>
+                                    <li class="option">一级选择2</li>
+                                    <li class="option">一级选择3</li>
+                                    <li class="option">一级选择4</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">自定义选择框</a>
+                        </div>
+
+                        <p>自定义单项选择的选择框,需要配合js实现的自定义选择框.带搜索输入框功能,如果不需要可直接去除DOM结构即可.</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

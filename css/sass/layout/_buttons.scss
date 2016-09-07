@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*
+* 按钮样式
+*
+* 全局式的按钮样式
+*/
+
+//
+// --------------------------------------------------
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    outline: 0;
+    @include border-radius(0);
+    //button-size参数: 上下内边距,左右内边距,字体大小,行高,圆角
+    @include button-size(4px, 12px, $font-size-base, $line-height-base, 0);
+    @include user-select(none);
+    //button-variant参数: 字体颜色, 背景颜色, 边框颜色
+    @include button-variant($btn-primary-color, $btn-primary-bg, lighten($btn-primary-bg, 6%), $btn-primary-border);
+
+    .qIcon {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
+
+a.btn {
+    &.disabled,
+    fieldset[disabled] & {
+        pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+}
+
+// 不同颜色的按钮
+// --------------------------------------------------
+//button-variant参数: 字体颜色, 背景颜色, 边框颜色
+.btn-gray {
+    @include button-variant($btn-gray-color, $btn-gray-bg, darken($btn-gray-bg, 2%), $btn-gray-border);
+}
+
+.btn-light {
+    @include button-variant($btn-light-color, $btn-light-bg, $btn-light-bg, $btn-light-border);
+}
+
+.btn-clear {
+    @extend .btn;
+    @include button-variant($btn-clear-color, $btn-clear-bg, $btn-clear-bg, $btn-clear-border);
+    padding: 0 3px;
+    border: 0;
+}
+
+// 链接样式按钮
+// -------------------------
+
+.btn-link {
+    color: $link-color;
+    font-weight: normal;
+    border-radius: 0;
+
+    &,
+    &:active,
+    &.active {
+        background-color: transparent;
+        @include box-shadow(none);
+    }
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: transparent;
+    }
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    &[disabled],
+    &.disabled {
+        cursor: not-allowed;
+        color: $btn-disabled-color;
+        background-color: transparent;
+        border-color: transparent;
+        text-decoration: underline;
+    }
+}
+
+// 按钮形状
+// --------------------------------------------------
+
+.btn-icon {
+    @include button-size(0, 0, $font-size-lg, 1, 0);
+    @include button-variant($color-icons, transparent, transparent, transparent);
+
+    &:hover,
+    &:focus,
+    &.focus {
+        color: darken($color-icons, 4%);
+    }
+    &:active,
+    &.active {
+        color: darken($color-icons, 6%);
+    }
+
+    .qIcon {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.btn-icon-primary {
+    width: 22px;
+    height: 22px;
+    @include button-size(4px, 4px, $font-size-base, 1, 50%);
+    @include button-variant($btn-primary-color, $btn-primary-bg, lighten($btn-primary-bg, 6%), transparent);
+
+    .qIcon {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.btn-icon-gray {
+    @include button-size(4px, 4px, $font-size-base, 1, 50%);
+    @include button-variant(#fff, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2), transparent);
+
+    .qIcon {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.btn-icon-clear {
+    @include button-size(4px, 4px, $font-size-base, 1, 50%);
+    @include button-variant(#ccc, #fff, #f9f9f9, #ddd);
+
+    .qIcon {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// 按钮大小
+// --------------------------------------------------
+//button-size参数: 上下内边距, 左右内边距, 字体大小, 行高, 圆角
+.btn-lg {
+    @include button-size(8px, 16px, $font-size-normal, $line-height-base, 0);
+}
+
+.btn-sm {
+    @include button-size(2px, 8px, $font-size-base, $line-height-base * 0.9, 0);
+}
+
+.btn-icon-lg {
+    width: 30px;
+    height: 30px;
+    @include button-size(5px, 5px, $font-size-md, 1, 50%);
+}
+
+.btn-icon-sm {
+    width: 18px;
+    height: 18px;
+    @include button-size(2px, 2px, $font-size-base * 0.8, 1, 50%);
+}
+
+// 块级按钮
+// --------------------------------------------------
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+    margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}
+
+// 按钮组合
+//----------------------------------------------------
+
+.btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle; // match .btn alignment given font-size hack above
+    > .btn {
+        position: relative;
+        float: left;
+        // Bring the "active" button to the front
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            z-index: 2;
+        }
+    }
+}
+
+// Prevent double borders when buttons are next to each other
+.btn-group {
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        margin-left: -1px;
+    }
+}
+
+.btn + .btn {
+    margin-left: 8px;
+}
+
+.btn-inline {
+    display: inline-block;
+
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group{
+        margin-left: 8px;
+    }
+}

@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/*
+* Tabs标签页样式
+*
+* --------------------------------------------------
+*/
+
+$tabs-nav-height: 36px;
+$tabs-border-color: #d9d9d9;
+$tabs-active-color: #2db7f5;
+
+/* Tabs标签页 */
+.tabs{
+    position: relative;
+    
+    .tabs-nav-wrap{
+        overflow: hidden;
+        border-bottom: 1px solid $tabs-border-color;
+        .tab-prev{
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #fff;
+            .arrowLeft:before{
+                font-size: 16px;
+                margin:10px 8px;
+            }
+        }
+        .tab-next{
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: #fff;
+            .arrowRight:before{
+                font-size: 16px;
+                margin:10px 8px;
+            }
+        }
+        .tabs-nav{
+            width: 9999px;
+            overflow: hidden;
+            margin-bottom: -1px;
+            float: left;
+            li{
+                height: $tabs-nav-height;
+                line-height: $tabs-nav-height;
+                float: left;
+                padding: 0 10px;
+                font-size: 14px;
+                cursor: pointer;
+                &.active{
+                    color: #659be0;
+                }
+                &:hover{
+                    color: #a2caee;
+                }
+                &.disabled{
+                    cursor: default;
+                    color: #cfcfcf;
+                }
+                &.disabled:hover{
+                    color: #cfcfcf;
+                }
+                .qIcon{
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    .tabs-content{
+        padding: 10px 0;
+        .tabs-pane{
+            display: none;
+            &.active{display: block;}
+        }
+    }
+    .tabs-ink-bar{
+        z-index: 1;
+        position: absolute;
+        top: 34px;
+        left: 0;
+        bottom: 1px;
+        box-sizing: border-box;
+        height: 2px;
+        background-color: #2db7f5;
+        display: block;
+    }
+}
+.tabs-slide{
+    .tabs-nav-wrap{
+        padding: 0 32px;
+        overflow: hidden;
+    }
+}
+.tabs-card{
+    .tabs-nav{
+        li{
+            margin: 0;
+            border: 1px solid transparent;
+            border-bottom: 0;
+            border-radius: 6px 6px 0 0;
+            background: #f9f9f9;
+            margin-right: 2px;
+            &.active{
+                    background: #fff;
+                    border-color: #d9d9d9;
+                    color: #2db7f5;
+            }
+        }
+    }
+    .tabs-ink-bar{
+        background: #fff;
+    }
+}
+.tabs-card-top{
+    .tabs-nav{
+        li{
+            margin: 0;
+            border: 1px solid transparent;
+            border-bottom: 0;
+            border-radius: 6px 6px 0 0;
+            background: #f9f9f9;
+            margin-right: 2px;
+            &.active{
+                    background: #fff;
+                    color: #2db7f5;
+            }
+        }
+    }
+    .tabs-ink-bar{
+        background: #fff;
+    }
+    .tabs-content{
+        background: #fff;
+        padding: 16px;
+        height: 120px;
+    }
+    .tabs-nav-wrap{
+        border: none;
+    }
+}
+.tabs-card-top{
+    background: #ECECEC;
+    overflow: hidden;
+    padding: 24px;
+}
+

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="menu">
+        <article class="markdown">
+            <h1>
+                导航菜单
+            </h1>
+
+            <p>为页面和功能提供导航的菜单列表。</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-24">
+                <div class="code-box expand" id="demo-horizontal">
+                    <div class="code-box-demo">
+
+                        <div class="menu-demo-horizontal">
+
+                            <ul class="menu menu-horizontal clearfix">
+                                <li class="menu-item menu-item-selected">
+                                    <a href="#">
+                                        <i class="qIcon shouye"></i><span>导航一</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item menu-item-disabled">
+                                    <a href="#">
+                                        <i class="qIcon xitong"></i><span>导航二</span>
+                                    </a>
+                                </li>
+                                <li class="menu-submenu">
+                                    <a href="#">
+                                        <i class="qIcon liebiao"></i><span>导航 - 子菜单</span>
+                                    </a>
+                                    <ul class="menu menu-vertical menu-sub">
+                                        <li class="menu-item-group">
+                                            <div class="menu-item-group-title">分组一</div>
+                                            <ul class="menu-item-group-list">
+                                                <li class="menu-item">
+                                                    <a href="#">选项一</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">选项二</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-group">
+                                            <div class="menu-item-group-title">分组一</div>
+                                            <ul class="menu-item-group-list">
+                                                <li class="menu-item">
+                                                    <a href="#">选项一</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">选项二</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">
+                                        <span>导航四 - 链接</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">顶部导航</a>
+                        </div>
+
+                        <p>水平的顶部导航菜单。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-24">
+                <div class="code-box expand" id="demo-sider">
+                    <div class="code-box-demo">
+
+                        <div class="menu-demo-sider">
+
+                            <ul class="menu-inline menu-root" id="menuInlineDemo1" style="width: 240px;">
+                                <li class="menu-inline-item menu-open">
+                                    <div class="menu-inline-title">
+                                        <a href="javascript:;">
+                                            <i class="qIcon shouye"></i>
+                                            <span>导航一</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-inline menu-sub">
+                                        <li class="menu-inline-item menu-item-group">
+                                            <div class="menu-inline-group-title">分组一</div>
+                                            <ul class="menu-inline-group-list">
+                                                <li class="menu-inline-item menu-item-selected">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项一</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项二</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-inline-item menu-item-group">
+                                            <div class="menu-inline-group-title">分组二</div>
+                                            <ul class="menu-inline-group-list">
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项三</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项四</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-inline-item">
+                                    <div class="menu-inline-title">
+                                        <a href="javascript:;">
+                                            <i class="qIcon xitong"></i>
+                                            <span>导航二</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-inline menu-sub">
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项五</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项六</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>三级导航</span>
+                                                    <i class="icon-arrow-line"></i>
+                                                </a>
+                                            </div>
+                                            <ul class="menu-inline menu-sub">
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项七</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项七</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-inline-item">
+                                    <div class="menu-inline-title">
+                                        <a href="javascript:void(0)">
+                                            <i class="qIcon liebiao"></i>
+                                            <span>导航三</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-inline  menu-sub">
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项九</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十一</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十二</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">内嵌菜单</a>
+                        </div>
+
+                        <p>垂直菜单，子菜单内嵌在菜单区域。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-24">
+                <div class="code-box expand" id="demo-sider">
+                    <div class="code-box-demo">
+
+                        <div class="menu-demo-sider">
+
+                            <ul class="menu-inline menu-root" id="menuInlineDemo2" style="width: 240px;">
+                                <li class="menu-inline-item">
+                                    <div class="menu-inline-title">
+                                        <a href="javascript:;">
+                                            <i class="qIcon shouye"></i>
+                                            <span>导航一</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-inline menu-sub">
+                                        <li class="menu-inline-item menu-item-group">
+                                            <div class="menu-inline-group-title">分组一</div>
+                                            <ul class="menu-inline-group-list">
+                                                <li class="menu-inline-item menu-item-selected">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项一</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项二</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-inline-item menu-item-group">
+                                            <div class="menu-inline-group-title">分组二</div>
+                                            <ul class="menu-inline-group-list">
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项三</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项四</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-inline-item">
+                                    <div class="menu-inline-title">
+                                        <a href="javascript:;">
+                                            <i class="qIcon xitong"></i>
+                                            <span>导航二</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-inline menu-sub">
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项五</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项六</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>三级导航</span>
+                                                    <i class="icon-arrow-line"></i>
+                                                </a>
+                                            </div>
+                                            <ul class="menu-inline menu-sub">
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项七</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-inline-item">
+                                                    <div class="menu-inline-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项七</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-inline-item">
+                                    <div class="menu-inline-title">
+                                        <a href="javascript:void(0)">
+                                            <i class="qIcon liebiao"></i>
+                                            <span>导航三</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-inline  menu-sub">
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项九</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十一</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-inline-item">
+                                            <div class="menu-inline-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十二</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">只展开当前父级菜单</a>
+                        </div>
+
+                        <p>点击菜单，收起其他展开的所有菜单，保持菜单聚焦简洁。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-24">
+                <div class="code-box expand" id="demo-sider">
+                    <div class="code-box-demo">
+
+                        <div class="menu-demo-sider">
+
+                            <ul class="menu-vertical menu-root" id="menuInlineDemo3" style="width: 240px;">
+                                <li class="menu-vertical-item">
+                                    <div class="menu-vertical-title">
+                                        <a href="javascript:;">
+                                            <i class="qIcon shouye"></i>
+                                            <span>导航一</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-vertical menu-sub">
+                                        <li class="menu-vertical-item menu-item-group">
+                                            <div class="menu-vertical-group-title">分组一</div>
+                                            <ul class="menu-vertical-group-list">
+                                                <li class="menu-vertical-item">
+                                                    <div class="menu-vertical-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项一</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-vertical-item">
+                                                    <div class="menu-vertical-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项二</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-vertical-item menu-item-group">
+                                            <div class="menu-vertical-group-title">分组二</div>
+                                            <ul class="menu-vertical-group-list">
+                                                <li class="menu-vertical-item">
+                                                    <div class="menu-vertical-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项三</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-vertical-item">
+                                                    <div class="menu-vertical-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项四</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-vertical-item">
+                                    <div class="menu-vertical-title">
+                                        <a href="javascript:;">
+                                            <i class="qIcon xitong"></i>
+                                            <span>导航二</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-vertical menu-sub">
+                                        <li class="menu-vertical-item">
+                                            <div class="menu-vertical-title">
+                                                <a href="javascript:;">
+                                                    <span>选项五</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-vertical-item">
+                                            <div class="menu-vertical-title">
+                                                <a href="javascript:;">
+                                                    <span>选项六</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-vertical-item">
+                                            <div class="menu-vertical-title">
+                                                <a href="javascript:;">
+                                                    <span>三级导航</span>
+                                                    <i class="icon-arrow-line"></i>
+                                                </a>
+                                            </div>
+                                            <ul class="menu-vertical menu-sub">
+                                                <li class="menu-vertical-item">
+                                                    <div class="menu-vertical-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项七</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-vertical-item">
+                                                    <div class="menu-vertical-title">
+                                                        <a href="javascript:;">
+                                                            <span>选项七</span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-vertical-item">
+                                    <div class="menu-vertical-title">
+                                        <a href="javascript:void(0)">
+                                            <i class="qIcon liebiao"></i>
+                                            <span>导航三</span>
+                                            <i class="icon-arrow-line"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="menu-vertical  menu-sub">
+                                        <li class="menu-vertical-item">
+                                            <div class="menu-vertical-title">
+                                                <a href="javascript:;">
+                                                    <span>选项九</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-vertical-item">
+                                            <div class="menu-vertical-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-vertical-item">
+                                            <div class="menu-vertical-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十一</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-vertical-item">
+                                            <div class="menu-vertical-title">
+                                                <a href="javascript:;">
+                                                    <span>选项十二</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">只展开当前父级菜单</a>
+                        </div>
+
+                        <p>点击菜单，收起其他展开的所有菜单，保持菜单聚焦简洁。</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

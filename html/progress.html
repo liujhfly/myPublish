@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="千米网-前端规范"/>
+    <title>千米网-前端规范</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://pic.qianmi.com/qmui/v0.2/css/iconfont.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+<header id="header"></header>
+<a href="index.html" class="goto-index" id="goToIndex">返回索引</a>
+
+<div class="main-wrapper">
+    <aside class="aside-container col-4"></aside>
+
+    <section class="main-container col-20">
+        <input type="hidden" id="fileName" value="progress">
+        <article class="markdown">
+            <h1>
+                进度条
+            </h1>
+
+            <p>说明</p>
+
+        </article>
+
+        <h2 class="component-demos">
+            代码演示
+        </h2>
+
+        <div class="code-boxes">
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="progress-line">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 30%; height: 10px;"></div>
+                                </div>
+                                <span class="progress-line-text">30%</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">基本</a>
+                        </div>
+
+                        <p>默认样式.</p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="progress-line status-active">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 30%; height: 5px;"></div>
+                                </div>
+                                <span class="progress-line-text">30%</span>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="progress-line status-success">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 60%; height: 10px;"></div>
+                                </div>
+                                <span class="progress-line-text">60%</span>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="progress-line status-exception">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 70%; height: 15px;"></div>
+                                </div>
+                                <span class="progress-line-text">
+                                    <i class="qIcon bangzhu"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="progress-line full">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 70%; height: 20px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">不同高度</a>
+                        </div>
+
+                        <p>需要有不同高度时,可以在<code>.progress-line-bg</code>元素中的行内样式中设置值.</code>
+                        </p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12">
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="progress-line status-active">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 30%; height: 10px;"></div>
+                                </div>
+                                <span class="progress-line-text">30%</span>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="progress-line status-success">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 60%; height: 10px;"></div>
+                                </div>
+                                <span class="progress-line-text">60%</span>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="progress-line status-exception">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 70%; height: 10px;"></div>
+                                </div>
+                                <span class="progress-line-text">
+                                    <i class="qIcon bangzhu"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="progress-line full">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" style="width: 70%; height: 10px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">不同状态</a>
+                        </div>
+
+                        <p>需要有不同状态时,可以在<code>.progress-line</code>元素中增加类名:
+                            <br>
+                            <code>.status-active</code>
+                            <br>
+                            <code>.status-success</code>
+                            <br>
+                            <code>.status-exception</code>
+                            <br>
+                            <code>.full</code>
+                        </p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+
+                <div class="code-box expand" id="demo-basic">
+                    <div class="code-box-demo">
+
+                        <div class="progress-line status-active" id="progressLine">
+                            <div class="progress-line-outer">
+                                <div class="progress-line-inner">
+                                    <div class="progress-line-bg" id="progressLineBg" style="width: 0%; height: 10px;"></div>
+                                </div>
+                                <span class="progress-line-text" id="progressLineText">0%</span>
+                            </div>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn btn-gray" id="progressMinus">-</button>
+                            <button class="btn btn-gray" id="progressPlus">+</button>
+                        </div>
+                    </div>
+                    <div class="code-box-meta markdown">
+                        <div class="code-box-title">
+                            <a href="#demo-basic" class="qIcon biaoqian">js动态加载</a>
+                        </div>
+
+                        <p>需要有加载动态效果时,需要用js实现.
+                        </p>
+
+                    </div>
+                    <div class="highlight">
+                        <span class="xmp">具体代码内容有待整理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="demos-anchor">
+            <li>
+                <a title="按钮类型" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+            <li>
+                <a title="按钮尺寸" href="#">
+                    <span>快捷菜单</span>
+                </a>
+            </li>
+        </ul>
+        <div class="prev-next-nav">
+            <span class="prev-page"></span>
+            <a class="next-page" href="#">
+
+                <span class="chinese"></span>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer"></footer>
+
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/demo.js"></script>
+<script type="text/javascript" src="../js/frame.js"></script>
+<script type="text/javascript" src="../js/frame-first.js"></script>
+<script type="text/javascript" src="../js/frame-second.js"></script>
+</body>
+</html>

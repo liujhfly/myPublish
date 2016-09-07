@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*
+* Breadcrumb面包屑样式
+*
+* --------------------------------------------------
+*/
+
+/* Breadcrumb面包屑 */
+.breadcrumb {
+  color: $gray-light;
+  >span {
+    a {
+      color: $gray;
+      &:hover {
+        color:   $link-hover-color;
+      }
+    }
+    .breadcrumb-separator {
+      margin: 0 8px;
+    }
+    &:last-child {
+      color: $gray;
+      font-weight: bold;
+      .breadcrumb-separator {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
